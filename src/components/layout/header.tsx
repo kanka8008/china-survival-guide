@@ -9,7 +9,6 @@ import { LanguageSwitcher } from "./language-switcher";
 
 interface HeaderProps {
   onSearchOpen?: () => void;
-  locale: string;
 }
 
 const NAV_ITEMS = [
@@ -21,7 +20,7 @@ const NAV_ITEMS = [
   { labelKey: "nav.about", href: "/about" },
 ] as const;
 
-export function Header({ onSearchOpen, locale }: HeaderProps) {
+export function Header({ onSearchOpen }: HeaderProps) {
   const t = useTranslations();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -100,7 +99,7 @@ export function Header({ onSearchOpen, locale }: HeaderProps) {
           </button>
 
           {/* Language switcher */}
-          <LanguageSwitcher currentLocale={locale} pathname={pathname} />
+          <LanguageSwitcher />
 
           {/* Mobile menu toggle */}
           <button

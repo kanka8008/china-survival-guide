@@ -5,17 +5,33 @@ import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LOCALE_LABELS, type Locale } from "@/types/article";
 
-interface Props {
-  currentLocale: string;
-  pathname: string;
+/**
+ * Build the target URL when switching to a new locale.
+ * Uses window.location.pathname directly to avoid next-intl router issues.
+ */
+function buildSwitchUrl(targetLocale: Locale): string {
+  const raw = window.location.pathname;
+  // Detect current locale from first path segment
+  const seg = raw.split("/")[1];
+  const current = ["en","zh","es","it","de","ru"].includes(seg) ? seg : "en";
+  // Strip current locale prefix
+  const rest = raw === `/${current}` ? "/" : raw.slice(current.length + 1) || "/";
+  // Build target: /{locale} + rest-of-path
+  return `/${targetLocale}${rest === "/" ? "" : rest}`;
 }
 
-export function LanguageSwitcher({ currentLocale, pathname }: Props) {
+export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
+  const [current, setCurrent] = useState<Locale>("en");
   const ref = useRef<HTMLDivElement>(null);
 
-  const locale = (currentLocale || "en") as Locale;
-  const currentLabel = LOCALE_LABELS[locale] ?? "English";
+  useEffect(() => {
+    const seg = window.location.pathname.split("/")[1];
+    const locs = ["en","zh","es","it","de","ru"];
+    setCurrent(locs.includes(seg) ? seg as Locale : "en");
+  }, []);
+
+  const currentLabel = LOCALE_LABELS[current] ?? "English";
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -27,15 +43,8 @@ export function LanguageSwitcher({ currentLocale, pathname }: Props) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  function getTargetUrl(targetLocale: Locale): string {
-    // pathname INCLUDES locale prefix (e.g. "/en" or "/en/articles/xxx")
-    // Strip current locale prefix, then prepend target locale
-    const pathWithoutLocale = pathname === `/${locale}`
-      ? "/"
-      : pathname.startsWith(`/${locale}/`)
-      ? pathname.slice(locale.length + 1)
-      : pathname;
-    return `/${targetLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
+  function handleSwitch(locale: Locale) {
+    window.location.href = buildSwitchUrl(locale);
   }
 
   return (
@@ -61,21 +70,20 @@ export function LanguageSwitcher({ currentLocale, pathname }: Props) {
           )}
         >
           {(Object.entries(LOCALE_LABELS) as [Locale, string][]).map(([loc, label]) => (
-            <a
+            <button
               key={loc}
-              href={getTargetUrl(loc)}
-              onClick={() => setOpen(false)}
+              onClick={() => handleSwitch(loc)}
               className={cn(
-                "flex w-full items-center justify-between px-4 py-2 text-sm no-underline",
+                "flex w-full items-center justify-between px-4 py-2 text-sm",
                 "transition-colors",
-                loc === locale
+                loc === current
                   ? "bg-muted text-foreground font-semibold"
                   : "text-secondary hover:bg-muted"
               )}
             >
               <span>{label}</span>
-              {loc === locale && <Check className="h-3.5 w-3.5 text-foreground" />}
-            </a>
+              {loc === current && <Check className="h-3.5 w-3.5 text-foreground" />}
+            </button>
           ))}
         </div>
       )}

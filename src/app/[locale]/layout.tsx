@@ -26,7 +26,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <GoogleAnalytics />
       <div className="flex min-h-screen flex-col">
-        <Header locale={locale} />
+        <Header />
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
