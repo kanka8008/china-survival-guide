@@ -1,0 +1,39 @@
+{
+  "name": "china-survival-guide",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/generate-search-index.mjs && next build && node scripts/generate-sitemap.mjs",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "latest",
+    "@mdx-js/react": "latest",
+    "@next/mdx": "16.2.9",
+    "@tailwindcss/typography": "^0.5.20",
+    "clsx": "latest",
+    "gray-matter": "latest",
+    "lucide-react": "latest",
+    "next": "16.2.9",
+    "next-intl": "latest",
+    "next-mdx-remote": "latest",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "reading-time": "latest",
+    "rehype-autolink-headings": "latest",
+    "rehype-slug": "latest",
+    "remark-gfm": "latest",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

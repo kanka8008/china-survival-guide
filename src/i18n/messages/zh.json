@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "中国生存指南",
+    "subtitle": "外国人在华生活所需的一切",
+    "description": "为来华或在中国生活的外国人提供的综合指南。涵盖签证、入境、日常生活、紧急情况和出境流程。"
+  },
+  "nav": {
+    "home": "首页",
+    "stages": "阶段",
+    "articles": "文章",
+    "faq": "常见问题",
+    "tools": "工具",
+    "about": "关于",
+    "search": "搜索"
+  },
+  "home": {
+    "hero_title": "在中国生存与发展",
+    "hero_subtitle": "您在中国作为外国人的完整指南——从签证申请到离境，应有尽有。",
+    "hero_cta": "开始您的旅程",
+    "hero_browse": "浏览全部文章",
+    "stages_title": "您的旅程，逐步推进",
+    "stages_subtitle": "外国人在华经历的六个阶段，每个阶段都有详细指南。",
+    "featured_title": "精选文章",
+    "featured_subtitle": "为每位旅行者精心挑选的必读内容。",
+    "tools_title": "快捷工具",
+    "tools_subtitle": "常见问题的快速解答。",
+    "ready_title": "准备好探索中国了吗？",
+    "ready_subtitle": "从我们的分步指南开始，覆盖您旅程的每个阶段。",
+    "ready_cta": "查看全部阶段"
+  },
+  "stages": {
+    "pre_entry": {
+      "title": "入境前",
+      "description": "签证申请、文件准备以及出行前需要了解的一切。"
+    },
+    "border_crossing": {
+      "title": "边境通关",
+      "description": "入境流程、海关申报以及机场注意事项。"
+    },
+    "first_72_hours": {
+      "title": "首个72小时",
+      "description": "SIM卡、移动支付、住宿登记以及安顿下来。"
+    },
+    "daily_survival": {
+      "title": "日常生活",
+      "description": "交通、银行、餐饮、购物以及在中国的生活日常。"
+    },
+    "emergency": {
+      "title": "紧急情况",
+      "description": "护照丢失、医疗求助、法律问题以及遇到麻烦时的应对方法。"
+    },
+    "departure": {
+      "title": "离境",
+      "description": "退税、出境流程以及离开中国前需要准备的事项。"
+    }
+  },
+  "tools": {
+    "visa_free": "免签指南",
+    "prohibited_items": "违禁物品",
+    "emergency_numbers": "紧急电话号码",
+    "transit_visa": "过境签证"
+  },
+  "article": {
+    "last_updated": "最后更新",
+    "target_audience": "目标受众",
+    "one_liner": "一句话总结",
+    "prerequisites": "前置条件",
+    "step_by_step": "分步指南",
+    "common_mistakes": "常见错误",
+    "backup_plan": "备选方案",
+    "red_line": "红线警告",
+    "related_articles": "相关文章",
+    "next_stage": "下一篇文章",
+    "prev_stage": "上一篇文章",
+    "table_of_contents": "目录",
+    "reading_time": "分钟阅读",
+    "share": "分享",
+    "tags": "标签",
+    "all_articles": "全部文章"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于在中国旅行和生活的常见问题快速解答。",
+    "search_placeholder": "搜索问题...",
+    "categories": "分类"
+  },
+  "about": {
+    "title": "关于本指南",
+    "subtitle": "我们的使命与方法",
+    "content": "中国生存指南是为在华外国人提供综合、最新资讯的资源平台。由经验丰富的旅行者和中国居民创建，我们的目标是让您的中国体验顺畅、安全、愉快。所有信息定期审核更新，以反映当前政策和流程。"
+  },
+  "search": {
+    "placeholder": "搜索文章...",
+    "no_results": "未找到结果。",
+    "results_for": "搜索结果"
+  },
+  "footer": {
+    "disclaimer": "本指南提供一般信息，不应视为法律建议。政策可能发生变化，请始终以官方来源为准。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "rights": "版权所有。"
+  },
+  "language": {
+    "switch": "切换语言"
+  },
+  "ads": {
+    "label": "广告"
+  },
+  "comments": {
+    "title": "评论",
+    "powered_by": "技术支持"
+  }
+}

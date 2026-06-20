@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "China-Überlebensleitfaden",
+    "subtitle": "Alles, was Ausländer zum Leben in China brauchen",
+    "description": "Ein umfassender Leitfaden für Ausländer, die China besuchen oder dort leben. Behandelt Visa, Grenzübertritt, Alltag, Notfälle und Ausreiseverfahren."
+  },
+  "nav": {
+    "home": "Startseite",
+    "stages": "Phasen",
+    "articles": "Artikel",
+    "faq": "Häufige Fragen",
+    "tools": "Werkzeuge",
+    "about": "Über uns",
+    "search": "Suche"
+  },
+  "home": {
+    "hero_title": "Überleben und Gedeihen in China",
+    "hero_subtitle": "Ihr vollständiger Leitfaden für das Leben in China als Ausländer — vom Visumantrag bis zur Abreise.",
+    "hero_cta": "Beginnen Sie Ihre Reise",
+    "hero_browse": "Alle Artikel Durchsuchen",
+    "stages_title": "Ihre Reise, Schritt für Schritt",
+    "stages_subtitle": "Sechs Phasen der Auslandserfahrung in China, jede mit detaillierten Anleitungen.",
+    "featured_title": "Empfohlene Artikel",
+    "featured_subtitle": "Wichtige Lektüre, handverlesen für jeden Reisenden.",
+    "tools_title": "Schnellwerkzeuge",
+    "tools_subtitle": "Schnelle Antworten auf häufige Fragen.",
+    "ready_title": "Bereit, China zu Erkunden?",
+    "ready_subtitle": "Beginnen Sie mit unseren Schritt-für-Schritt-Anleitungen für jede Phase Ihrer Reise.",
+    "ready_cta": "Alle Phasen Anzeigen"
+  },
+  "stages": {
+    "pre_entry": {
+      "title": "Vor der Einreise",
+      "description": "Visumanträge, Dokumentenvorbereitung und alles, was Sie vor der Reise benötigen."
+    },
+    "border_crossing": {
+      "title": "Grenzübertritt",
+      "description": "Einwanderungsverfahren, Zollerklärungen und was Sie am Flughafen erwartet."
+    },
+    "first_72_hours": {
+      "title": "Erste 72 Stunden",
+      "description": "SIM-Karten, mobile Zahlungen, Unterkunftsregistrierung und Einrichtung."
+    },
+    "daily_survival": {
+      "title": "Tägliches Überleben",
+      "description": "Transport, Bankwesen, Essen, Einkaufen und Alltag in China."
+    },
+    "emergency": {
+      "title": "Notfall",
+      "description": "Verlorene Pässe, medizinische Hilfe, rechtliche Probleme und was zu tun ist, wenn etwas schief geht."
+    },
+    "departure": {
+      "title": "Abreise",
+      "description": "Steuerrückerstattungen, Ausreiseverfahren und was Sie vor der Abreise aus China vorbereiten sollten."
+    }
+  },
+  "tools": {
+    "visa_free": "Visumfrei-Leitfaden",
+    "prohibited_items": "Verbotene Gegenstände",
+    "emergency_numbers": "Notrufnummern",
+    "transit_visa": "Transitvisum"
+  },
+  "article": {
+    "last_updated": "Zuletzt Aktualisiert",
+    "target_audience": "Zielgruppe",
+    "one_liner": "Auf den Punkt Gebracht",
+    "prerequisites": "Voraussetzungen",
+    "step_by_step": "Schritt für Schritt",
+    "common_mistakes": "Häufige Fehler",
+    "backup_plan": "Notfallplan",
+    "red_line": "Rote-Linie-Warnung",
+    "related_articles": "Verwandte Artikel",
+    "next_stage": "Nächster Artikel",
+    "prev_stage": "Vorheriger Artikel",
+    "table_of_contents": "Inhaltsverzeichnis",
+    "reading_time": "Min. Lesezeit",
+    "share": "Teilen",
+    "tags": "Schlagwörter",
+    "all_articles": "Alle Artikel"
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "subtitle": "Schnelle Antworten auf häufige Fragen zum Reisen und Leben in China.",
+    "search_placeholder": "Fragen durchsuchen...",
+    "categories": "Kategorien"
+  },
+  "about": {
+    "title": "Über Diesen Leitfaden",
+    "subtitle": "Unsere Mission und Methodik",
+    "content": "Der China-Überlebensleitfaden ist eine umfassende, aktuelle Ressource für Ausländer, die sich in China zurechtfinden. Erstellt von erfahrenen Reisenden und China-Bewohnern, ist es unser Ziel, Ihre China-Erfahrung reibungslos, sicher und angenehm zu gestalten. Alle Informationen werden regelmäßig überprüft und aktualisiert, um die aktuellen Richtlinien und Verfahren widerzuspiegeln."
+  },
+  "search": {
+    "placeholder": "Artikel durchsuchen...",
+    "no_results": "Keine Ergebnisse gefunden.",
+    "results_for": "Ergebnisse für"
+  },
+  "footer": {
+    "disclaimer": "Dieser Leitfaden bietet allgemeine Informationen und sollte nicht als Rechtsberatung betrachtet werden. Richtlinien können sich ändern; überprüfen Sie immer offizielle Quellen.",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "language": {
+    "switch": "Sprache Wechseln"
+  },
+  "ads": {
+    "label": "Werbung"
+  },
+  "comments": {
+    "title": "Kommentare",
+    "powered_by": "Bereitgestellt von"
+  }
+}

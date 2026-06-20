@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "Guía de Supervivencia en China",
+    "subtitle": "Todo lo que los extranjeros necesitan para vivir en China",
+    "description": "Una guía completa para extranjeros que visitan o viven en China. Cubre visas, cruce de fronteras, vida diaria, emergencias y procedimientos de salida."
+  },
+  "nav": {
+    "home": "Inicio",
+    "stages": "Etapas",
+    "articles": "Artículos",
+    "faq": "Preguntas Frecuentes",
+    "tools": "Herramientas",
+    "about": "Acerca de",
+    "search": "Buscar"
+  },
+  "home": {
+    "hero_title": "Sobrevive y Prospera en China",
+    "hero_subtitle": "Tu guía completa para navegar China como extranjero — desde la solicitud de visa hasta la salida.",
+    "hero_cta": "Comienza tu Viaje",
+    "hero_browse": "Explorar Todos los Artículos",
+    "stages_title": "Tu Viaje, Paso a Paso",
+    "stages_subtitle": "Seis etapas de la experiencia extranjera en China, cada una con guías detalladas.",
+    "featured_title": "Artículos Destacados",
+    "featured_subtitle": "Lecturas esenciales seleccionadas para cada viajero.",
+    "tools_title": "Herramientas Rápidas",
+    "tools_subtitle": "Respuestas rápidas a preguntas comunes.",
+    "ready_title": "¿Listo para Explorar China?",
+    "ready_subtitle": "Comienza con nuestras guías paso a paso que cubren cada etapa de tu viaje.",
+    "ready_cta": "Ver Todas las Etapas"
+  },
+  "stages": {
+    "pre_entry": {
+      "title": "Pre-Entrada",
+      "description": "Solicitudes de visa, preparación de documentos y todo lo que necesitas antes de viajar."
+    },
+    "border_crossing": {
+      "title": "Cruce de Frontera",
+      "description": "Procedimientos de inmigración, declaraciones de aduana y qué esperar en el aeropuerto."
+    },
+    "first_72_hours": {
+      "title": "Primeras 72 Horas",
+      "description": "Tarjetas SIM, pagos móviles, registro de alojamiento e instalación."
+    },
+    "daily_survival": {
+      "title": "Supervivencia Diaria",
+      "description": "Transporte, banca, comida, compras y vida cotidiana en China."
+    },
+    "emergency": {
+      "title": "Emergencia",
+      "description": "Pasaportes perdidos, ayuda médica, problemas legales y qué hacer cuando las cosas salen mal."
+    },
+    "departure": {
+      "title": "Salida",
+      "description": "Reembolsos de impuestos, procedimientos de salida y qué preparar antes de dejar China."
+    }
+  },
+  "tools": {
+    "visa_free": "Guía Sin Visa",
+    "prohibited_items": "Artículos Prohibidos",
+    "emergency_numbers": "Números de Emergencia",
+    "transit_visa": "Visa de Tránsito"
+  },
+  "article": {
+    "last_updated": "Última Actualización",
+    "target_audience": "Público Objetivo",
+    "one_liner": "En Pocas Palabras",
+    "prerequisites": "Requisitos Previos",
+    "step_by_step": "Paso a Paso",
+    "common_mistakes": "Errores Comunes",
+    "backup_plan": "Plan de Respaldo",
+    "red_line": "Advertencia de Línea Roja",
+    "related_articles": "Artículos Relacionados",
+    "next_stage": "Artículo Siguiente",
+    "prev_stage": "Artículo Anterior",
+    "table_of_contents": "Tabla de Contenidos",
+    "reading_time": "min de lectura",
+    "share": "Compartir",
+    "tags": "Etiquetas",
+    "all_articles": "Todos los Artículos"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas rápidas a preguntas comunes sobre viajar y vivir en China.",
+    "search_placeholder": "Buscar preguntas...",
+    "categories": "Categorías"
+  },
+  "about": {
+    "title": "Acerca de Esta Guía",
+    "subtitle": "Nuestra misión y metodología",
+    "content": "La Guía de Supervivencia en China es un recurso completo y actualizado para extranjeros que navegan la vida en China. Creada por viajeros experimentados y residentes en China, nuestro objetivo es hacer que tu experiencia en China sea fluida, segura y agradable. Toda la información se revisa y actualiza regularmente para reflejar las políticas y procedimientos vigentes."
+  },
+  "search": {
+    "placeholder": "Buscar artículos...",
+    "no_results": "No se encontraron resultados.",
+    "results_for": "Resultados para"
+  },
+  "footer": {
+    "disclaimer": "Esta guía proporciona información general y no debe considerarse asesoramiento legal. Las políticas pueden cambiar; verifica siempre con fuentes oficiales.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "rights": "Todos los derechos reservados."
+  },
+  "language": {
+    "switch": "Cambiar Idioma"
+  },
+  "ads": {
+    "label": "Publicidad"
+  },
+  "comments": {
+    "title": "Comentarios",
+    "powered_by": "Desarrollado por"
+  }
+}

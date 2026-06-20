@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "Guida di Sopravvivenza in Cina",
+    "subtitle": "Tutto ciò di cui gli stranieri hanno bisogno per vivere in Cina",
+    "description": "Una guida completa per stranieri in visita o residenti in Cina. Copre visti, attraversamento delle frontiere, vita quotidiana, emergenze e procedure di partenza."
+  },
+  "nav": {
+    "home": "Home",
+    "stages": "Fasi",
+    "articles": "Articoli",
+    "faq": "Domande Frequenti",
+    "tools": "Strumenti",
+    "about": "Informazioni",
+    "search": "Cerca"
+  },
+  "home": {
+    "hero_title": "Sopravvivi e Prospera in Cina",
+    "hero_subtitle": "La tua guida completa per orientarti in Cina come straniero — dalla richiesta del visto alla partenza.",
+    "hero_cta": "Inizia il Tuo Viaggio",
+    "hero_browse": "Sfoglia Tutti gli Articoli",
+    "stages_title": "Il Tuo Viaggio, Passo Dopo Passo",
+    "stages_subtitle": "Sei fasi dell'esperienza straniera in Cina, ognuna con guide dettagliate.",
+    "featured_title": "Articoli in Evidenza",
+    "featured_subtitle": "Letture essenziali selezionate per ogni viaggiatore.",
+    "tools_title": "Strumenti Rapidi",
+    "tools_subtitle": "Risposte veloci alle domande più comuni.",
+    "ready_title": "Pronto a Esplorare la Cina?",
+    "ready_subtitle": "Inizia con le nostre guide passo passo che coprono ogni fase del tuo viaggio.",
+    "ready_cta": "Vedi Tutte le Fasi"
+  },
+  "stages": {
+    "pre_entry": {
+      "title": "Pre-Ingresso",
+      "description": "Richieste di visto, preparazione dei documenti e tutto ciò che serve prima del viaggio."
+    },
+    "border_crossing": {
+      "title": "Attraversamento Frontiera",
+      "description": "Procedure di immigrazione, dichiarazioni doganali e cosa aspettarsi in aeroporto."
+    },
+    "first_72_hours": {
+      "title": "Prime 72 Ore",
+      "description": "SIM card, pagamenti mobili, registrazione dell'alloggio e ambientamento."
+    },
+    "daily_survival": {
+      "title": "Sopravvivenza Quotidiana",
+      "description": "Trasporti, servizi bancari, cibo, acquisti e vita di tutti i giorni in Cina."
+    },
+    "emergency": {
+      "title": "Emergenza",
+      "description": "Passaporti smarriti, assistenza medica, questioni legali e cosa fare quando qualcosa va storto."
+    },
+    "departure": {
+      "title": "Partenza",
+      "description": "Rimborsi fiscali, procedure di uscita e cosa preparare prima di lasciare la Cina."
+    }
+  },
+  "tools": {
+    "visa_free": "Guida Senza Visto",
+    "prohibited_items": "Articoli Vietati",
+    "emergency_numbers": "Numeri di Emergenza",
+    "transit_visa": "Visto di Transito"
+  },
+  "article": {
+    "last_updated": "Ultimo Aggiornamento",
+    "target_audience": "Pubblico di Riferimento",
+    "one_liner": "In Breve",
+    "prerequisites": "Prerequisiti",
+    "step_by_step": "Passo Dopo Passo",
+    "common_mistakes": "Errori Comuni",
+    "backup_plan": "Piano di Riserva",
+    "red_line": "Avvertenza Linea Rossa",
+    "related_articles": "Articoli Correlati",
+    "next_stage": "Articolo Successivo",
+    "prev_stage": "Articolo Precedente",
+    "table_of_contents": "Indice dei Contenuti",
+    "reading_time": "min di lettura",
+    "share": "Condividi",
+    "tags": "Tag",
+    "all_articles": "Tutti gli Articoli"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "subtitle": "Risposte rapide alle domande più comuni su viaggiare e vivere in Cina.",
+    "search_placeholder": "Cerca domande...",
+    "categories": "Categorie"
+  },
+  "about": {
+    "title": "Informazioni su Questa Guida",
+    "subtitle": "La nostra missione e metodologia",
+    "content": "La Guida di Sopravvivenza in Cina è una risorsa completa e aggiornata per stranieri che vivono in Cina. Creata da viaggiatori esperti e residenti in Cina, il nostro obiettivo è rendere la tua esperienza in Cina fluida, sicura e piacevole. Tutte le informazioni vengono regolarmente riviste e aggiornate per riflettere le politiche e le procedure attuali."
+  },
+  "search": {
+    "placeholder": "Cerca articoli...",
+    "no_results": "Nessun risultato trovato.",
+    "results_for": "Risultati per"
+  },
+  "footer": {
+    "disclaimer": "Questa guida fornisce informazioni generali e non deve essere considerata consulenza legale. Le politiche possono cambiare; verifica sempre con fonti ufficiali.",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini di Servizio",
+    "rights": "Tutti i diritti riservati."
+  },
+  "language": {
+    "switch": "Cambia Lingua"
+  },
+  "ads": {
+    "label": "Pubblicità"
+  },
+  "comments": {
+    "title": "Commenti",
+    "powered_by": "Offerto da"
+  }
+}
