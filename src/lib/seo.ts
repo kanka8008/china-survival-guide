@@ -2,35 +2,54 @@ import type { Metadata } from "next";
 import type { Article, Locale } from "@/types/article";
 import { SITE_NAME, SITE_DOMAIN } from "@/lib/constants";
 
+function resolveImageUrl(image: string | undefined): string | undefined {
+  if (!image) return undefined;
+  if (image.startsWith("http")) return image;
+  if (image.startsWith("/")) return `https://${SITE_DOMAIN}${image}`;
+  return `https://${SITE_DOMAIN}/images/articles/${image}`;
+}
+
 export function generateArticleMeta(article: Article, locale: Locale): Metadata {
   const { frontmatter, slug } = article;
-  const url = `https://${SITE_DOMAIN}/${locale}/${frontmatter.stage}/${slug}`;
+  const articlePath = `/articles/${slug}`;
+  const url = `https://${SITE_DOMAIN}/${locale}${articlePath}`;
   const schema = generateArticleSchema(article, url);
-  const basePath = `/${locale}/${frontmatter.stage}/${slug}`;
+  const imageUrl = resolveImageUrl(frontmatter.image);
+
+  // Build hreflang alternates for all supported locales
+  const languages: Record<string, string> = {};
+  for (const loc of ["en", "zh", "es", "it", "de", "ru"]) {
+    languages[loc] = `/${loc}${articlePath}`;
+  }
+  // x-default points to English
+  languages["x-default"] = `/en${articlePath}`;
+
   return {
-    title: `${frontmatter.title} | ${SITE_NAME}`,
+    // Use just title — root layout template adds "| China Survival Guide"
+    title: frontmatter.title,
     description: frontmatter.description,
-    metadataBase: new URL(`https://${SITE_DOMAIN}`),
     alternates: {
-      canonical: `/${locale}/${frontmatter.stage}/${slug}`,
+      canonical: `/${locale}${articlePath}`,
+      languages,
     },
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
       url,
       type: "article",
-      locale: locale,
-      images: frontmatter.image ? [{ url: frontmatter.image }] : undefined,
+      locale,
+      images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630 }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: frontmatter.title,
       description: frontmatter.description,
-      images: frontmatter.image ? [frontmatter.image] : undefined,
+      images: imageUrl ? [imageUrl] : undefined,
     },
     other: {
       "application/ld+json": JSON.stringify(schema),
     },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -39,8 +58,7 @@ function generateArticleSchema(article: Article, url: string): object {
   if (frontmatter.schemaType === "FAQPage") {
     const faqItems = tableOfContents
       .filter((toc) => toc.level === 3)
-      .map((toc, index, arr) => {
-        // Extract answer text: content between this heading and the next heading
+      .map((toc) => {
         const headingRegex = new RegExp(
           `###\\s+${escapeRegex(toc.text)}[\\s\\S]*?`,
           "m"
@@ -49,13 +67,11 @@ function generateArticleSchema(article: Article, url: string): object {
         let answerText = "";
         if (match) {
           const startIndex = match.index! + match[0].length;
-          // Find next heading (## or ###) or end of content
           const restContent = content.slice(startIndex);
           const nextHeadingMatch = restContent.match(/^#{2,3}\s/m);
           const answerRaw = nextHeadingMatch
             ? restContent.slice(0, nextHeadingMatch.index)
             : restContent;
-          // Strip markdown formatting for clean text
           answerText = stripMarkdown(answerRaw).trim().slice(0, 200);
         }
         return {
@@ -115,9 +131,8 @@ export function generatePageMeta(
   const fullPath = path.startsWith("/") ? path : `/${path}`;
   const basePath = `/${locale}${fullPath}`;
   return {
-    title: `${title} | ${SITE_NAME}`,
+    title,
     description,
-    metadataBase: new URL(`https://${SITE_DOMAIN}`),
     alternates: {
       canonical: basePath,
     },
@@ -126,13 +141,13 @@ export function generatePageMeta(
       description,
       url: `https://${SITE_DOMAIN}${basePath}`,
       locale,
-      images: [{ url: "/images/hero/hero-banner.png" }],
+      images: [{ url: `https://${SITE_DOMAIN}/images/hero/hero-banner.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/hero/hero-banner.png"],
+      images: [`https://${SITE_DOMAIN}/images/hero/hero-banner.png`],
     },
   };
 }

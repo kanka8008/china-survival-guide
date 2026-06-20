@@ -1,20 +1,108 @@
 ---
-title: "WeChat Pay for Foreigners: Setup Guide"
-description: "How to set up WeChat Pay with a foreign Visa or Mastercard for use in China. Covers wallet region switching, passport verification, card binding, common error fixes, and transaction limits."
+title: "WeChat Pay para Extranjeros: Guía de Configuración"
+description: "Cómo configurar WeChat Pay con una tarjeta extranjera Visa o Mastercard para usar en China. Cubre cambio de región de billetera, verificación de pasaporte, vinculación de tarjeta, soluciones de errores comunes y límites de transacciones."
 slug: "wechat-pay-foreign-card"
 stage: "first-72-hours"
-tags: ["WeChat Pay", "Mobile Payment", "Foreign Card"]
+tags: ["WeChat Pay", "Pago Móvil", "Tarjeta Extranjera"]
 schemaType: "HowTo"
 lastUpdated: "2026-06-17"
-targetAudience: "Foreigners visiting China who want to use WeChat Pay"
-oneLiner: "WeChat Pay supports foreign Visa and Mastercard — you must switch your wallet region to Chinese Mainland, complete passport verification, and enable 3D Secure on your card."
+targetAudience: "Extranjeros que visitan China y quieren usar WeChat Pay"
+oneLiner: "WeChat Pay admite Visa y Mastercard extranjeras — debe cambiar la región de su billetera a China Continental, completar la verificación de pasaporte y habilitar 3D Secure en su tarjeta."
 prerequisites:
-  - "Visa or Mastercard (most stable compatibility; other card types have limited support)"
-  - "Valid passport"
-  - "Overseas mobile number"
-  - "Latest version of the WeChat app"
-redlineWarning: ""
+  - "Visa o Mastercard (compatibilidad más estable; otros tipos de tarjeta tienen soporte limitado)"
+  - "Pasaporte válido"
+  - "Número de móvil extranjero"
+  - "Última versión de la aplicación WeChat"
+redlineWarning: "Las cuentas de WeChat Pay vinculadas a tarjetas extranjeras no pueden enviar transferencias entre pares, sobres rojos ni acceder a servicios financieros. Patrones de transacción inusuales activarán el sistema de detección de fraude y pueden restringir la funcionalidad de pago."
+image: wechat-pay-foreign-card.png
 order: 15
 ---
 
-Este artículo está siendo traducido. La versión completa en inglés está disponible en la edición en inglés.
+WeChat Pay es la otra mitad del duopolio de pagos móviles de China junto con Alipay. Configurarlo con una tarjeta extranjera implica algunos pasos más que Alipay, principalmente porque debe cambiar la **región de la billetera** — un paso no necesario para Alipay.
+
+## Datos Clave Antes de Comenzar
+
+- **Comisión de servicio:** La misma estructura que Alipay. Gratis para transacciones menores a 200 RMB. **Comisión del 3%** para transacciones de 200 RMB o más.
+- **Límites de transacción:** El máximo por transacción única es de 6.000 RMB. El límite acumulativo mensual es de 50.000 RMB. El límite acumulativo anual es de 60.000 RMB.
+- **Tarjetas admitidas:** Visa y Mastercard son las más confiables. JCB, Amex y otras redes tienen soporte limitado o inestable en WeChat Pay.
+- **Lo que no puede hacer:** Enviar transferencias entre pares, enviar o recibir sobres rojos, o usar los servicios financieros de WeChat (gestión de patrimonio, préstamos en mini-programas).
+
+## Guía Paso a Paso
+
+### Paso 1: Registrarse e Iniciar Sesión
+
+1. Descargue WeChat de su tienda de aplicaciones.
+2. Regístrese usando su **número de móvil extranjero**. La verificación se realiza por SMS.
+3. Complete la configuración básica del perfil — no necesita agregar contactos inmediatamente.
+
+### Paso 2: Cambiar la Región de la Billetera a China Continental
+
+Este es el paso que la mayoría de las guías pasan por alto y es la fuente más común de fallos de configuración.
+
+1. Vaya a **Yo > Servicios** (o "Wallet" en versiones anteriores).
+2. Si la región de su billetera está configurada en su país de origen, las funciones de pago en China no están disponibles.
+3. Busque **"Cambiar Región de Billetera"** o **"Cambiar Región"** — típicamente se encuentra en el menú de la esquina superior derecha (tres puntos) de la página Servicios/Billetera.
+4. Seleccione **China Continental** como la nueva región.
+5. Confirme el cambio. La aplicación se recargará y la página de Servicios cambiará para mostrar las funciones de pago chinas.
+
+Nota: Cambiar a China Continental no afecta sus contactos de chat, Momentos ni ninguna otra función de WeChat. Solo cambia la región de pago.
+
+### Paso 3: Completar la Verificación de Nombre Real con Pasaporte
+
+1. Vaya a **Yo > Servicios > Billetera > Información de Identidad** (o "Verificación de Nombre Real").
+2. Seleccione **Pasaporte Extranjero** como su tipo de identificación.
+3. Ingrese su nombre **exactamente como aparece en su pasaporte** — incluyendo segundos nombres y guiones.
+4. Ingrese su número de pasaporte, nacionalidad y fecha de nacimiento.
+5. Cargue una foto de la página de información de su pasaporte. La foto debe ser clara y mostrar todo el texto sin reflejos.
+6. Complete el **escaneo de reconocimiento facial**. Mantenga su rostro dentro del marco y siga las instrucciones en pantalla (parpadear, asentir o girar la cabeza según las instrucciones).
+7. Envíe y espere la verificación. Esto puede tomar desde unos minutos hasta varias horas.
+
+### Paso 4: Agregar Su Tarjeta Bancaria Extranjera
+
+1. Después de que se apruebe la verificación, vaya a **Yo > Servicios > Billetera > Tarjetas Bancarias**.
+2. Toque **Agregar una Tarjeta Bancaria**.
+3. Ingrese su número de tarjeta. WeChat detectará automáticamente Visa o Mastercard.
+4. Complete los detalles de su tarjeta: fecha de vencimiento, CVV y la **dirección de facturación registrada en su banco**. La dirección debe coincidir exactamente con los registros de su banco.
+5. Complete la **verificación por SMS** (un código enviado al número de teléfono registrado en su banco).
+6. Complete la **verificación 3D Secure** si se le solicita — esta es una contraseña o código adicional de su banco.
+
+### Paso 5: Comenzar a Pagar
+
+Para pagar en una tienda:
+- Toque **Yo > Servicios > Dinero (el ícono verde "Pagar")**
+- El comercio escanea su código QR, o usted toca "Escanear" para escanear el código QR del comercio
+- El pago se deduce de su tarjeta extranjera vinculada
+- Recibe una notificación de transacción
+
+## Soluciones de Errores Comunes
+
+| Problema | Causa Probable | Solución |
+|---|---|---|
+| "Función no disponible en su región" | Región de billetera no cambiada a China Continental | Vaya a Configuración en la Billetera y cambie la región a China Continental |
+| "Tipo de tarjeta no admitido" | Usando una tarjeta que no es Visa ni Mastercard | Cambie a Visa o Mastercard — el soporte de WeChat Pay para otras redes no es confiable |
+| "Verificación de nombre real fallida" | El nombre o número de pasaporte no coincide | Vuelva a ingresar los detalles coincidiendo exactamente con el pasaporte, incluyendo espacios y guiones |
+| "No se puede agregar tarjeta" después de la verificación | El banco bloquea la transacción | Llame a su banco para habilitar transacciones en línea en el extranjero e infórmeles que está en China |
+| "Transacción rechazada" en un comercio | Categoría de comercio bloqueada o límite de tarjeta excedido | Intente un monto más pequeño o un comercio diferente; confirme el límite diario de la tarjeta con su banco |
+| "Control de riesgo — pago restringido" | Patrón de transacción inusual detectado | Este es un disparador automático del sistema antifraude. Espere 24 horas e intente de nuevo con transacciones más pequeñas y normales |
+
+## WeChat Pay vs. Alipay para Extranjeros
+
+Ambas plataformas sirven al mismo propósito, pero hay diferencias que vale la pena conocer:
+
+| Aspecto | Alipay | WeChat Pay |
+|---|---|---|
+| Soporte de tarjetas | Visa, MC, JCB, Amex, Diners, Discover | Principalmente Visa y Mastercard |
+| Complejidad de configuración | Menor (sin cambio de región necesario) | Mayor (cambio de región requerido) |
+| Límite por transacción única | 3.000 RMB | 6.000 RMB |
+| Idioma de la aplicación | Interfaz completamente en inglés | Inglés parcial — algunas configuraciones permanecen en chino |
+| Cobertura de comercios | Ligeramente mejor para servicios en línea (vuelos, hoteles) | Mejor para vendedores ambulantes, tiendas pequeñas, escenarios sociales |
+| Respaldo con TourCard | Sí (TourCard prepaga de Alipay) | Sin equivalente |
+
+La mayoría de los visitantes extranjeros configuran ambas. Alipay es más fácil de configurar y tiene una mejor interfaz en inglés. WeChat Pay tiene ventaja para vendedores más pequeños y áreas rurales donde WeChat es el método de pago dominante. Tener ambas le da cobertura completa.
+
+## Consejos para un Uso Fluido
+
+- **Configure Alipay primero**, luego WeChat Pay. La interfaz en inglés de Alipay y su configuración más simple hacen que sea una primera experiencia más fluida. Una vez que Alipay funciona, tiene un respaldo mientras configura WeChat.
+- **Mantenga el escaneo de su pasaporte en su teléfono.** WeChat puede pedirle que vuelva a verificar si detecta actividad inusual.
+- **Pruebe con una compra pequeña.** Después de la configuración, compre una botella de agua en una tienda de conveniencia — una transacción de 3 RMB confirma que todo funciona antes de depender de ello para una cena de 500 RMB.
+- **Si WeChat Pay se niega a cooperar después de múltiples intentos**, no siga intentándolo — corre el riesgo de bloquear la cuenta. Use Alipay y efectivo en su lugar, e intente de nuevo al día siguiente.
