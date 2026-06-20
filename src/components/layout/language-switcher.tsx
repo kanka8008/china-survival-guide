@@ -26,9 +26,9 @@ export function LanguageSwitcher() {
   }, []);
 
   function switchTo(locale: Locale) {
-    const parts = pathname.split("/");
-    parts[1] = locale;
-    const newPath = parts.join("/") || `/${locale}`;
+    // pathname from next-intl is without locale prefix (e.g. "/articles/visa-free-guide")
+    // Build the new path: "/{locale}{pathname}"
+    const newPath = `/${locale}${pathname}`;
     router.push(newPath);
     setOpen(false);
   }
