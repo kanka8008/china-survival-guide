@@ -76,7 +76,9 @@
     "reading_time": "Min. Lesezeit",
     "share": "Teilen",
     "tags": "Schlagwörter",
-    "all_articles": "Alle Artikel"
+    "all_articles": "Alle Artikel",
+    "content_may_be_outdated": "Dieser Artikel kann veraltete Informationen enthalten. Vorschriften ändern sich häufig.",
+    "last_updated_on": "Zuletzt aktualisiert: {date}"
   },
   "faq": {
     "title": "Häufig Gestellte Fragen",

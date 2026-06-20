@@ -76,7 +76,9 @@
     "reading_time": "min di lettura",
     "share": "Condividi",
     "tags": "Tag",
-    "all_articles": "Tutti gli Articoli"
+    "all_articles": "Tutti gli Articoli",
+    "content_may_be_outdated": "Questo articolo potrebbe contenere informazioni obsolete. Normative e politiche cambiano frequentemente.",
+    "last_updated_on": "Ultimo aggiornamento: {date}"
   },
   "faq": {
     "title": "Domande Frequenti",

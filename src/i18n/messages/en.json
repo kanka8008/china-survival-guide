@@ -76,7 +76,9 @@
     "reading_time": "min read",
     "share": "Share",
     "tags": "Tags",
-    "all_articles": "All Articles"
+    "all_articles": "All Articles",
+    "content_may_be_outdated": "This article may contain outdated information. Regulations and policies change frequently.",
+    "last_updated_on": "Last updated on {date}"
   },
   "faq": {
     "title": "Frequently Asked Questions",

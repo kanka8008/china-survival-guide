@@ -7,6 +7,7 @@ import { formatDate } from "@/lib/utils";
 import type { ArticleFrontmatter, TocEntry } from "@/types/article";
 import { MdxRenderer } from "./mdx-renderer";
 import { TableOfContents } from "./table-of-contents";
+import { FreshnessNotice } from "./freshness-notice";
 
 interface ArticleTemplateProps {
   frontmatter: ArticleFrontmatter;
@@ -77,6 +78,9 @@ export function ArticleTemplate({
             <span>{readingTime} min read</span>
           </div>
         </header>
+
+        {/* Freshness notice */}
+        <FreshnessNotice lastUpdated={frontmatter.lastUpdated} locale={locale} />
 
         {/* Module 3: One-Liner — HIGH CONTRAST */}
         {frontmatter.oneLiner && (

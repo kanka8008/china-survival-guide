@@ -76,7 +76,9 @@
     "reading_time": "分钟阅读",
     "share": "分享",
     "tags": "标签",
-    "all_articles": "全部文章"
+    "all_articles": "全部文章",
+    "content_may_be_outdated": "本文可能包含过时信息。法规和政策变动频繁。",
+    "last_updated_on": "最后更新于 {date}"
   },
   "faq": {
     "title": "常见问题",
