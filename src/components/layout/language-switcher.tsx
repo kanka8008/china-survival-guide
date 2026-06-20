@@ -5,30 +5,27 @@ import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LOCALE_LABELS, type Locale } from "@/types/article";
 
-/**
- * Build the target URL when switching to a new locale.
- * Uses window.location.pathname directly to avoid next-intl router issues.
- */
-function buildSwitchUrl(targetLocale: Locale): string {
-  const raw = window.location.pathname;
-  // Detect current locale from first path segment
-  const seg = raw.split("/")[1];
-  const current = ["en","zh","es","it","de","ru"].includes(seg) ? seg : "en";
-  // Strip current locale prefix
-  const rest = raw === `/${current}` ? "/" : raw.slice(current.length + 1) || "/";
-  // Build target: /{locale} + rest-of-path
-  return `/${targetLocale}${rest === "/" ? "" : rest}`;
-}
-
 export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<Locale>("en");
+  const [switchUrls, setSwitchUrls] = useState<Record<string, string>>({});
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const seg = window.location.pathname.split("/")[1];
+    // Compute all switch URLs on mount from window.location.pathname
+    const raw = window.location.pathname;
+    const seg = raw.split("/")[1];
     const locs = ["en","zh","es","it","de","ru"];
-    setCurrent(locs.includes(seg) ? seg as Locale : "en");
+    const cur = locs.includes(seg) ? seg as Locale : "en";
+    setCurrent(cur);
+
+    // Strip current locale and build target URLs
+    const base = raw === `/${cur}` ? "/" : raw.slice(cur.length + 1) || "/";
+    const urls: Record<string, string> = {};
+    for (const loc of locs) {
+      urls[loc] = `/${loc}${base === "/" ? "" : base}`;
+    }
+    setSwitchUrls(urls);
   }, []);
 
   const currentLabel = LOCALE_LABELS[current] ?? "English";
@@ -42,10 +39,6 @@ export function LanguageSwitcher() {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
-
-  function handleSwitch(locale: Locale) {
-    window.location.href = buildSwitchUrl(locale);
-  }
 
   return (
     <div ref={ref} className="relative">
@@ -70,11 +63,12 @@ export function LanguageSwitcher() {
           )}
         >
           {(Object.entries(LOCALE_LABELS) as [Locale, string][]).map(([loc, label]) => (
-            <button
+            <a
               key={loc}
-              onClick={() => handleSwitch(loc)}
+              href={switchUrls[loc] || `/${loc}`}
+              onClick={() => setOpen(false)}
               className={cn(
-                "flex w-full items-center justify-between px-4 py-2 text-sm",
+                "flex w-full items-center justify-between px-4 py-2 text-sm no-underline",
                 "transition-colors",
                 loc === current
                   ? "bg-muted text-foreground font-semibold"
@@ -83,7 +77,7 @@ export function LanguageSwitcher() {
             >
               <span>{label}</span>
               {loc === current && <Check className="h-3.5 w-3.5 text-foreground" />}
-            </button>
+            </a>
           ))}
         </div>
       )}
