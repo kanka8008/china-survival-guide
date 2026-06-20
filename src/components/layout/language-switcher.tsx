@@ -5,31 +5,17 @@ import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LOCALE_LABELS, type Locale } from "@/types/article";
 
-const SUPPORTED_LOCALES = ["en", "zh", "es", "it", "de", "ru"];
-
-/** Extract path without locale prefix from a URL pathname */
-function stripLocale(path: string): string {
-  for (const loc of SUPPORTED_LOCALES) {
-    if (path === `/${loc}`) return "/";
-    if (path.startsWith(`/${loc}/`)) return path.slice(loc.length + 1);
-  }
-  return path;
+interface Props {
+  currentLocale: string;
+  pathname: string;
 }
 
-/** Detect current locale from URL pathname */
-function detectLocale(path: string): Locale {
-  const seg = path.split("/")[1];
-  return (SUPPORTED_LOCALES.includes(seg) ? seg : "en") as Locale;
-}
-
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ currentLocale, pathname }: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Read directly from browser URL, NOT from next-intl (which may strip/re-prefix)
-  const rawPathname = typeof window !== "undefined" ? window.location.pathname : "/en";
-  const currentLocale = detectLocale(rawPathname);
-  const currentLabel = LOCALE_LABELS[currentLocale] ?? "English";
+  const locale = (currentLocale || "en") as Locale;
+  const currentLabel = LOCALE_LABELS[locale] ?? "English";
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -41,11 +27,10 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  function switchTo(locale: Locale) {
-    const path = stripLocale(window.location.pathname);
-    const target = `/${locale}${path === "/" ? "" : path}`;
-    window.location.href = target;
-    setOpen(false);
+  function getTargetUrl(targetLocale: Locale): string {
+    // pathname is already stripped of locale prefix by next-intl
+    // e.g. "/" or "/articles/visa-free-guide"
+    return `/${targetLocale}${pathname === "/" ? "" : pathname}`;
   }
 
   return (
@@ -70,25 +55,23 @@ export function LanguageSwitcher() {
             "shadow-lg shadow-foreground/10 py-1 z-50"
           )}
         >
-          {(Object.entries(LOCALE_LABELS) as [Locale, string][]).map(([locale, label]) => {
-            const isActive = locale === currentLocale;
-            return (
-              <button
-                key={locale}
-                onClick={() => switchTo(locale)}
-                className={cn(
-                  "flex w-full items-center justify-between px-4 py-2 text-sm",
-                  "transition-colors",
-                  isActive
-                    ? "bg-muted text-foreground font-semibold"
-                    : "text-secondary hover:bg-muted"
-                )}
-              >
-                <span>{label}</span>
-                {isActive && <Check className="h-3.5 w-3.5 text-foreground" />}
-              </button>
-            );
-          })}
+          {(Object.entries(LOCALE_LABELS) as [Locale, string][]).map(([loc, label]) => (
+            <a
+              key={loc}
+              href={getTargetUrl(loc)}
+              onClick={() => setOpen(false)}
+              className={cn(
+                "flex w-full items-center justify-between px-4 py-2 text-sm no-underline",
+                "transition-colors",
+                loc === locale
+                  ? "bg-muted text-foreground font-semibold"
+                  : "text-secondary hover:bg-muted"
+              )}
+            >
+              <span>{label}</span>
+              {loc === locale && <Check className="h-3.5 w-3.5 text-foreground" />}
+            </a>
+          ))}
         </div>
       )}
     </div>
