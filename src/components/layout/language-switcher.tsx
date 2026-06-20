@@ -26,15 +26,14 @@ export function LanguageSwitcher() {
   }, []);
 
   function switchTo(locale: Locale) {
-    // Strip current locale prefix from pathname (handle both prefixed and non-prefixed)
+    // Strip current locale prefix to get clean path, then pass locale option
     let pathWithoutLocale = pathname;
     const supportedLocales = ["en", "zh", "es", "it", "de", "ru"];
     for (const loc of supportedLocales) {
       if (pathname === `/${loc}`) { pathWithoutLocale = "/"; break; }
       if (pathname.startsWith(`/${loc}/`)) { pathWithoutLocale = pathname.slice(loc.length + 1); break; }
     }
-    const newPath = `/${locale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
-    router.push(newPath);
+    router.push(pathWithoutLocale, { locale });
     setOpen(false);
   }
 
