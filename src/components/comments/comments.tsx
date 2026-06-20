@@ -10,10 +10,10 @@ export function Comments() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "YOUR_GITHUB_USER/YOUR_REPO");
-    script.setAttribute("data-repo-id", "YOUR_REPO_ID");
-    script.setAttribute("data-category", "Comments");
-    script.setAttribute("data-category-id", "YOUR_CATEGORY_ID");
+    script.setAttribute("data-repo", "kanka8008/china-survival-guide");
+    script.setAttribute("data-repo-id", "R_kgDOS__kaQ");
+    script.setAttribute("data-category", "General");
+    script.setAttribute("data-category-id", "DIC_kwDOS__kac4C_i5I");
     script.setAttribute("data-mapping", "pathname");
     script.setAttribute("data-strict", "0");
     script.setAttribute("data-reactions-enabled", "1");
@@ -37,17 +37,18 @@ export function Comments() {
         {t("title")}
       </h2>
       <p className="mt-2 text-sm text-secondary">
-        {t("powered_by")} Giscus. Configure your GitHub repository by replacing
-        <code className="mx-1 rounded bg-muted px-1 py-0.5 text-xs text-secondary">
-          data-repo
-        </code>
-        and
-        <code className="mx-1 rounded bg-muted px-1 py-0.5 text-xs text-secondary">
-          data-repo-id
-        </code>
-        attributes in the source code.
+        {t("powered_by")}{" "}
+        <a
+          href="https://giscus.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Giscus
+        </a>
+        . {t("login_github")}
       </p>
-      <div id="giscus-container" className="mt-4" />
+      <div id="giscus-container" className="mt-4 min-h-[50px]" />
     </section>
   );
 }

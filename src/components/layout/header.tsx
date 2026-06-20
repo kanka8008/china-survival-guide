@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "./language-switcher";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 interface HeaderProps {
   onSearchOpen?: () => void;
@@ -100,6 +101,9 @@ export function Header({ onSearchOpen }: HeaderProps) {
 
           {/* Language switcher */}
           <LanguageSwitcher />
+
+          {/* Dark mode toggle */}
+          <ThemeToggle />
 
           {/* Mobile menu toggle */}
           <button

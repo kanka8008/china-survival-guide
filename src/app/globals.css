@@ -32,6 +32,27 @@
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 
+/* ========== Dark Mode ========== */
+.dark {
+  --color-background: #0B1120;
+  --color-foreground: #E2E8F0;
+  --color-primary: #E2E8F0;
+  --color-primary-foreground: #0B1120;
+  --color-secondary: #94A3B8;
+  --color-muted: #1E293B;
+  --color-muted-foreground: #64748B;
+  --color-accent: #F43F5E;
+  --color-accent-foreground: #FFFFFF;
+  --color-card: #1E293B;
+  --color-card-foreground: #E2E8F0;
+  --color-border: #334155;
+  --color-ring: #F43F5E;
+  --color-destructive: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F43F5E;
+  --color-info: #60A5FA;
+}
+
 /* ========== Base ========== */
 body {
   background: var(--color-background);
