@@ -24,6 +24,17 @@ export function generateArticleMeta(article: Article, locale: Locale): Metadata 
   // x-default points to English
   languages["x-default"] = `/en${articlePath}`;
 
+  // Build breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `https://${SITE_DOMAIN}/${locale}` },
+      { "@type": "ListItem", position: 2, name: "Articles", item: `https://${SITE_DOMAIN}/${locale}/articles` },
+      { "@type": "ListItem", position: 3, name: frontmatter.title, item: url },
+    ],
+  };
+
   return {
     // Use just title — root layout template adds "| China Survival Guide"
     title: frontmatter.title,
@@ -47,7 +58,10 @@ export function generateArticleMeta(article: Article, locale: Locale): Metadata 
       images: imageUrl ? [imageUrl] : undefined,
     },
     other: {
-      "application/ld+json": JSON.stringify(schema),
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [schema, breadcrumbSchema],
+      }),
     },
     robots: { index: true, follow: true },
   };
