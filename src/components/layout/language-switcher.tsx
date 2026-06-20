@@ -28,9 +28,14 @@ export function LanguageSwitcher({ currentLocale, pathname }: Props) {
   }, []);
 
   function getTargetUrl(targetLocale: Locale): string {
-    // pathname is already stripped of locale prefix by next-intl
-    // e.g. "/" or "/articles/visa-free-guide"
-    return `/${targetLocale}${pathname === "/" ? "" : pathname}`;
+    // pathname INCLUDES locale prefix (e.g. "/en" or "/en/articles/xxx")
+    // Strip current locale prefix, then prepend target locale
+    const pathWithoutLocale = pathname === `/${locale}`
+      ? "/"
+      : pathname.startsWith(`/${locale}/`)
+      ? pathname.slice(locale.length + 1)
+      : pathname;
+    return `/${targetLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
   }
 
   return (
