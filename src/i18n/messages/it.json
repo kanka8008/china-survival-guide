@@ -104,10 +104,12 @@
     "switch": "Cambia Lingua"
   },
   "ads": {
-    "label": "Pubblicità"
+    "label": "Pubblicità",
+    "placeholder": "Pubblicità"
   },
   "comments": {
     "title": "Commenti",
-    "powered_by": "Offerto da"
+    "powered_by": "Offerto da",
+    "login_github": "Accedi con GitHub per lasciare un commento."
   }
 }

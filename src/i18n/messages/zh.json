@@ -104,10 +104,12 @@
     "switch": "切换语言"
   },
   "ads": {
-    "label": "广告"
+    "label": "广告",
+    "placeholder": "广告"
   },
   "comments": {
     "title": "评论",
-    "powered_by": "技术支持"
+    "powered_by": "技术支持",
+    "login_github": "使用 GitHub 登录留言。"
   }
 }

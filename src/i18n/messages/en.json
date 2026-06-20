@@ -104,10 +104,12 @@
     "switch": "Switch Language"
   },
   "ads": {
-    "label": "Advertisement"
+    "label": "Advertisement",
+    "placeholder": "Advertisement"
   },
   "comments": {
     "title": "Comments",
-    "powered_by": "Powered by"
+    "powered_by": "Powered by",
+    "login_github": "Log in with GitHub to leave a comment."
   }
 }
