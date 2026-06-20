@@ -1,18 +1,34 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter, usePathname } from "@/i18n/navigation";
 import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LOCALE_LABELS, type Locale } from "@/types/article";
 
+const SUPPORTED_LOCALES = ["en", "zh", "es", "it", "de", "ru"];
+
+/** Extract path without locale prefix from a URL pathname */
+function stripLocale(path: string): string {
+  for (const loc of SUPPORTED_LOCALES) {
+    if (path === `/${loc}`) return "/";
+    if (path.startsWith(`/${loc}/`)) return path.slice(loc.length + 1);
+  }
+  return path;
+}
+
+/** Detect current locale from URL pathname */
+function detectLocale(path: string): Locale {
+  const seg = path.split("/")[1];
+  return (SUPPORTED_LOCALES.includes(seg) ? seg : "en") as Locale;
+}
+
 export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-  const pathname = usePathname();
 
-  const currentLocale = (pathname.split("/")[1] || "en") as Locale;
+  // Read directly from browser URL, NOT from next-intl (which may strip/re-prefix)
+  const rawPathname = typeof window !== "undefined" ? window.location.pathname : "/en";
+  const currentLocale = detectLocale(rawPathname);
   const currentLabel = LOCALE_LABELS[currentLocale] ?? "English";
 
   useEffect(() => {
@@ -26,14 +42,9 @@ export function LanguageSwitcher() {
   }, []);
 
   function switchTo(locale: Locale) {
-    // Strip current locale prefix to get clean path, then pass locale option
-    let pathWithoutLocale = pathname;
-    const supportedLocales = ["en", "zh", "es", "it", "de", "ru"];
-    for (const loc of supportedLocales) {
-      if (pathname === `/${loc}`) { pathWithoutLocale = "/"; break; }
-      if (pathname.startsWith(`/${loc}/`)) { pathWithoutLocale = pathname.slice(loc.length + 1); break; }
-    }
-    router.push(pathWithoutLocale, { locale });
+    const path = stripLocale(window.location.pathname);
+    const target = `/${locale}${path === "/" ? "" : path}`;
+    window.location.href = target;
     setOpen(false);
   }
 
