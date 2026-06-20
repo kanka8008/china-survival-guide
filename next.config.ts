@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   output: "export",
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   images: { unoptimized: true },
-  turbopack: {
-    root: "/Users/kangjiajia/china-survival-guide",
-  },
 };
 const withMDX = createMDX({ extension: /\.mdx?$/ });
 export default withNextIntl(withMDX(nextConfig));
