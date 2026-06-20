@@ -26,9 +26,14 @@ export function LanguageSwitcher() {
   }, []);
 
   function switchTo(locale: Locale) {
-    // pathname from next-intl is without locale prefix (e.g. "/articles/visa-free-guide")
-    // Build the new path: "/{locale}{pathname}"
-    const newPath = `/${locale}${pathname}`;
+    // Strip current locale prefix from pathname (handle both prefixed and non-prefixed)
+    let pathWithoutLocale = pathname;
+    const supportedLocales = ["en", "zh", "es", "it", "de", "ru"];
+    for (const loc of supportedLocales) {
+      if (pathname === `/${loc}`) { pathWithoutLocale = "/"; break; }
+      if (pathname.startsWith(`/${loc}/`)) { pathWithoutLocale = pathname.slice(loc.length + 1); break; }
+    }
+    const newPath = `/${locale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
     router.push(newPath);
     setOpen(false);
   }
