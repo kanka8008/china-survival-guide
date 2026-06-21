@@ -1,8 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { generatePageMeta } from "@/lib/seo";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 import { STAGES } from "@/lib/constants";
+import type { Metadata } from "next";
 import type { Locale, Stage } from "@/types/article";
 
 const STAGE_NUMBER_COLORS: Record<Stage, string> = {
@@ -13,6 +15,12 @@ const STAGE_NUMBER_COLORS: Record<Stage, string> = {
   emergency: "bg-primary text-primary-foreground",
   departure: "bg-primary text-primary-foreground",
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+  return generatePageMeta(t("nav.stages"), t("home.stages_subtitle"), locale as Locale, "/stages");
+}
 
 export default async function StagesPage({
   params,

@@ -15,6 +15,8 @@ import {
 import { getArticlesByStage } from "@/lib/articles";
 import { STAGES } from "@/lib/constants";
 import { ArticleCard } from "@/components/article/article-card";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
 import type { Locale, Stage } from "@/types/article";
 
 const STAGE_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -37,6 +39,14 @@ const STAGE_BG: Record<Stage, string> = {
 
 export function generateStaticParams() {
   return STAGES.map((stage) => ({ slug: stage.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale });
+  const stageInfo = STAGES.find((s) => s.slug === slug);
+  if (!stageInfo) return {};
+  return generatePageMeta(t(stageInfo.titleKey), t(stageInfo.descriptionKey), locale as Locale, `/stages/${slug}`);
 }
 
 export default async function StageDetailPage({

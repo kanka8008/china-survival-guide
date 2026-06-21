@@ -3,11 +3,19 @@ import { Link } from "@/i18n/navigation";
 import { STAGES, QUICK_TOOLS } from "@/lib/constants";
 import { getAllArticles } from "@/lib/articles";
 import { ArticleCard } from "@/components/article/article-card";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
 import type { Locale } from "@/types/article";
 import { PlaneTakeoff, Scan, Clock, Compass, AlertTriangle, PlaneLanding, ArrowRight, Globe, Ban, Phone, Route, ExternalLink } from "lucide-react";
 
 const STAGE_ICONS: Record<string, React.ComponentType<{className?: string}>> = { PlaneTakeoff, Scan, Clock, Compass, AlertTriangle, PlaneLanding };
 const TOOL_ICONS: Record<string, React.ComponentType<{className?: string}>> = { Globe, Ban, Phone, Route };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+  return generatePageMeta(t("hero_title"), t("hero_subtitle"), locale as Locale, "/");
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
