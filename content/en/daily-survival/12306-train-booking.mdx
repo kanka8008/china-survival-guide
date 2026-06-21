@@ -55,7 +55,7 @@ You need to add yourself as a passenger before you can buy tickets.
 1. Tap **"Passengers"** from the bottom menu bar.
 2. Tap **"Add Passenger"** (the blue button).
 3. For ID type, scroll to and select **"Foreign Passport."** Do not select "Passport" — that option is for Chinese passports.
-4. Enter your **surname** and **given name** exactly as they appear in your passport's machine-readable zone (MRZ) — the two lines of text at the bottom of your photo page. The format in the MRZ is: SURNAME<<GIVEN<NAME. If your passport shows "SMITH<<JOHN<DAVID," enter Smith as surname, John David as given name. This MRZ-matching requirement is the main reason verification fails on the first attempt.
+4. Enter your **surname** and **given name** exactly as they appear in your passport's machine-readable zone (MRZ) — the two lines of text at the bottom of your photo page. The format in the MRZ is: `SURNAME<<GIVEN<NAME`. If your passport shows `SMITH<<JOHN<DAVID`, enter Smith as surname, John David as given name. This MRZ-matching requirement is the main reason verification fails on the first attempt.
 5. Enter your passport number, select your nationality from the dropdown, enter your date of birth.
 6. Tap **"Save."** The passenger appears in your list with a status badge — "Verifying" (yellow) or "Verified" (green).
 
@@ -175,7 +175,7 @@ If you printed a paper ticket, changes and cancellations are only possible at a 
 
 ## Common Pitfalls
 
-- **MRZ name format mismatch.** The machine-readable zone at the bottom of your passport photo page uses chevrons (<<) as separators. "SMITH<<JOHN" means surname Smith, given name John. "VAN<DER<WAALS<<JOHANNES" means surname Van Der Waals, given name Johannes. Enter exactly this format. Adding or removing spaces between surname components causes verification failure.
+- **MRZ name format mismatch.** The machine-readable zone at the bottom of your passport photo page uses chevrons (`<<`) as separators. `SMITH<<JOHN` means surname Smith, given name John. `VAN<DER<WAALS<<JOHANNES` means surname Van Der Waals, given name Johannes. Enter exactly this format. Adding or removing spaces between surname components causes verification failure.
 
 - **Wrong station in the same city.** Beijing has Beijing South (北京南), Beijing West (北京西), Beijing (北京), Beijing North (北京北), Beijing Chaoyang (北京朝阳), and others. A train departing from Beijing South cannot be boarded at Beijing West — these are physically separate stations. Before confirming your booking, verify the station name in the ticket details, not just the city name.
 
