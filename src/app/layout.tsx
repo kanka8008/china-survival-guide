@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.png", apple: "/favicon.png" },
   manifest: "/manifest.json",
   verification: { google: "IhC56ZAgSQxad3eDjB6Ctd5UkbHHIohAiURpjwpQK0w" },
-  openGraph: { type: "website", siteName: "China Survival Guide", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.png"] },
-  twitter: { card: "summary_large_image", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.png"] },
+  openGraph: { type: "website", siteName: "China Survival Guide", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.webp"] },
+  twitter: { card: "summary_large_image", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.webp"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

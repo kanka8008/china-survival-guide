@@ -164,13 +164,13 @@ export function generatePageMeta(
       description,
       url: `https://${SITE_DOMAIN}${basePath}`,
       locale,
-      images: [{ url: `https://${SITE_DOMAIN}/images/hero/hero-banner.png`, width: 1200, height: 630 }],
+      images: [{ url: `https://${SITE_DOMAIN}/images/hero/hero-banner.webp`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`https://${SITE_DOMAIN}/images/hero/hero-banner.png`],
+      images: [`https://${SITE_DOMAIN}/images/hero/hero-banner.webp`],
     },
     robots: { index: true, follow: true },
   };
