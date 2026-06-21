@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+import type { Locale } from "@/types/article";
 import { Link } from "@/i18n/navigation";
 import {
   ArrowLeft,
@@ -169,6 +172,11 @@ const EMBASSY_CONTACTS = [
     website: "mfat.govt.nz/china",
   },
 ];
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMeta("Emergency Numbers", "Quick reference of all emergency phone numbers in China including police, fire, ambulance, and foreigner-specific hotlines", locale as Locale, "/tools/emergency-numbers");
+}
 
 export default async function EmergencyNumbersPage({
   params,

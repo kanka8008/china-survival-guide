@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+import type { Locale } from "@/types/article";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft, ShieldAlert, AlertTriangle, Ban } from "lucide-react";
 
@@ -68,6 +71,11 @@ const RESTRICTED_ITEMS = [
     requirement: "Must register with CAAC and customs",
   },
 ];
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMeta("Prohibited Items Check", "Look up whether an item is prohibited, restricted, or allowed to bring into China", locale as Locale, "/tools/prohibited-items");
+}
 
 export default async function ProhibitedItemsPage({
   params,

@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+import type { Locale } from "@/types/article";
 import { Link } from "@/i18n/navigation";
 import {
   ArrowLeft,
@@ -8,6 +11,11 @@ import {
   CheckCircle2,
   AlertTriangle,
 } from "lucide-react";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMeta("Transit Visa Checker", "Check which transit visa-free policy applies to your nationality and route through China", locale as Locale, "/tools/transit-visa");
+}
 
 export default async function TransitVisaPage({
   params,

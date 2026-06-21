@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+import type { Locale } from "@/types/article";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft, CheckCircle2, Clock } from "lucide-react";
 
@@ -70,6 +73,11 @@ const STATUS_COLORS: Record<VisaFreeCountry["status"], string> = {
   "mutual-exemption": "bg-blue-100 text-blue-800",
   upcoming: "bg-yellow-100 text-yellow-800",
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMeta("Visa-Free Checker", "Check if your nationality qualifies for China's visa-free entry policy and how long you can stay", locale as Locale, "/tools/visa-free");
+}
 
 export default async function VisaFreePage({
   params,
