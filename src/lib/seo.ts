@@ -144,11 +144,20 @@ export function generatePageMeta(
 ): Metadata {
   const fullPath = path.startsWith("/") ? path : `/${path}`;
   const basePath = `/${locale}${fullPath}`;
+
+  // Build hreflang alternates for all supported locales
+  const languages: Record<string, string> = {};
+  for (const loc of ["en", "zh", "es", "it", "de", "ru"]) {
+    languages[loc] = `/${loc}${fullPath}`;
+  }
+  languages["x-default"] = `/en${fullPath}`;
+
   return {
     title,
     description,
     alternates: {
       canonical: basePath,
+      languages,
     },
     openGraph: {
       title,
@@ -163,5 +172,6 @@ export function generatePageMeta(
       description,
       images: [`https://${SITE_DOMAIN}/images/hero/hero-banner.png`],
     },
+    robots: { index: true, follow: true },
   };
 }

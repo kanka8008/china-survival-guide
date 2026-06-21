@@ -60,6 +60,8 @@ export function ArticleTemplate({
               <img
                 src={heroSrc}
                 alt={frontmatter.title}
+                width={1600}
+                height={900}
                 loading="eager"
                 className="aspect-video max-h-[400px] w-full object-cover"
               />

@@ -44,6 +44,8 @@ export function ArticleCard({
           <img
             src={imageSrc}
             alt={frontmatter.title}
+            width={1200}
+            height={675}
             loading="lazy"
             className="h-full w-full object-cover"
           />
