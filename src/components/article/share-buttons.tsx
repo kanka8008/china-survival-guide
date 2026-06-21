@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Share2, Twitter, Facebook, Mail, Link2, Check } from "lucide-react";
+import { Share2, Twitter, MessageCircle, Mail, Link2, Check } from "lucide-react";
 import { useState } from "react";
 
 export function ShareButtons({ url, title }: { url: string; title: string }) {
@@ -25,7 +25,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
     {
       name: "Facebook",
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-      icon: Facebook,
+      icon: MessageCircle,
     },
     {
       name: "Email",
