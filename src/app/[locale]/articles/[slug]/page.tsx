@@ -10,7 +10,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LOCALES } from "@/types/article";
 import type { Locale } from "@/types/article";
-import { ShareButton } from "@/components/article/share-button";
+import { ShareButtons } from "@/components/article/share-buttons";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -71,7 +71,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           />
 
           <div className="flex flex-wrap items-center justify-between gap-4 mt-8 pt-8 border-t border-border">
-            <ShareButton label={t("share")} />
+            <ShareButtons url={`https://chinavisaentry.com/${locale}/articles/${article.slug}`} title={article.frontmatter.title} />
             <div className="flex items-center gap-4">
               {adjacent.prev && <Link href={`/articles/${adjacent.prev.slug}`} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline"><ArrowLeft className="w-4 h-4" /> {t("prev_stage")}</Link>}
               {adjacent.next && <Link href={`/articles/${adjacent.next.slug}`} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">{t("next_stage")} <ArrowRight className="w-4 h-4" /></Link>}

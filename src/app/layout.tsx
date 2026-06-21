@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: "Comprehensive survival guide for foreigners in China. Visa, entry, daily life, emergencies, departure — step-by-step practical instructions.",
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.png", apple: "/favicon.png" },
+  manifest: "/manifest.json",
   verification: { google: "IhC56ZAgSQxad3eDjB6Ctd5UkbHHIohAiURpjwpQK0w" },
   openGraph: { type: "website", siteName: "China Survival Guide", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.png"] },
   twitter: { card: "summary_large_image", title: "China Survival Guide", description: "Complete lifecycle guide for foreigners in China.", images: ["/images/hero/hero-banner.png"] },
