@@ -20,11 +20,27 @@ order: 15
 
 WeChat Pay ist die andere Hälfte des mobilen Zahlungsduopols Chinas neben Alipay. Die Einrichtung mit einer ausländischen Karte erfordert einige Schritte mehr als Alipay, hauptsächlich weil Sie die **Wallet-Region** wechseln müssen – ein Schritt, der bei Alipay nicht erforderlich ist.
 
+![WeChat Pay Einrichtung mit ausländischer Karte](/images/articles/wechat-pay-foreign-card.png)
+
+## WeChat Pay vs. Alipay – Was Sie ins Stolpern bringt
+
+Bevor Sie anfangen, kennen Sie diese Unterschiede. Sie verursachen die meiste Frustration, die Sie in Reddit-Threads und Reiseforen finden werden.
+
+**Verifizierung dauert länger.** Alipay verifiziert einen ausländischen Reisepass in 5-10 Minuten während der Pekinger Geschäftszeiten. WeChat Pay braucht 30 Minuten bis 4 Stunden, manchmal 24 Stunden. Das System führt häufiger manuelle Überprüfungen durch. Wenn Sie um 23 Uhr Pekinger Zeit einreichen, erwarten Sie die Genehmigung am nächsten Morgen. Planen Sie Ihren ersten WeChat-Pay-Kauf nicht direkt nach der Landung.
+
+**Weitaus weniger Kartennetzwerke funktionieren.** WeChat Pay akzeptiert zuverlässig Visa und Mastercard. Die JCB-Unterstützung ist lückenhaft – sie funktioniert bei einigen japanischen Karten und scheitert bei anderen ohne Erklärung. American Express, Diners Club und Discover scheitern fast immer. Die Fehlermeldung sagt Ihnen das nicht. Sie tippen auf „Karte hinzufügen", geben eine Amex-Nummer ein, der grüne Spinner läuft 15 Sekunden, und dann: „Kartentyp nicht unterstützt." Nichts in der Benutzeroberfläche warnt Sie im Voraus.
+
+**Die Benutzeroberfläche bleibt teilweise auf Chinesisch.** Selbst nach dem Umschalten von WeChat auf Englisch bleiben einige Bildschirme im Zahlungsbereich auf Chinesisch. Der Bildschirm zum Wallet-Region-Wechsel, die Statusseite der Identitätsüberprüfung und bestimmte Fehlerdialoge werden nur auf Chinesisch angezeigt. Sie müssen Screenshots machen und übersetzen oder den in diesem Leitfaden beschriebenen Schaltflächenpositionen folgen.
+
+**Kein TourCard-Äquivalent existiert.** Alipays TourCard ist eine Prepaid-Rückfalllösung, falls die direkte Kartenbindung scheitert. WeChat Pay hat kein Äquivalent. Wenn Ihre Karte sich nicht mit WeChat Pay verbinden kann, haben Sie keinen Backup-Pfad – Sie verwenden Alipay und Bargeld.
+
+**Bankabdeckung unterscheidet sich von Alipay.** Eine Karte, die sich erfolgreich mit Alipay verbindet, kann bei WeChat Pay dennoch scheitern. Die beiden Plattformen verwenden unterschiedliche Zahlungsprozessoren und unterschiedliche Acquiring-Banken. Eine regionale US-Kreditgenossenschaftskarte, die Alipay akzeptiert, könnte von WeChat Pay ohne spezifischen Grund abgelehnt werden. Testen Sie beide Plattformen mit derselben Karte.
+
 ## Wichtige Fakten, bevor Sie beginnen
 
-- **Servicegebühr:** Gleiche Struktur wie Alipay. Kostenlos für Transaktionen unter 200 RMB. **3% Servicegebühr** für Transaktionen ab 200 RMB.
+- **Servicegebühr:** Kostenlos für Transaktionen unter 200 RMB. **3% Servicegebühr** für Transaktionen ab 200 RMB.
 - **Transaktionslimits:** Einzeltransaktionsmaximum beträgt 6.000 RMB. Monatliches Gesamtlimit beträgt 50.000 RMB. Jährliches Gesamtlimit beträgt 60.000 RMB.
-- **Unterstützte Karten:** Visa und Mastercard sind am zuverlässigsten. JCB, Amex und andere Netzwerke haben eingeschränkte oder instabile Unterstützung bei WeChat Pay.
+- **Unterstützte Karten:** Visa und Mastercard funktionieren zuverlässig. JCB funktioniert manchmal. Amex, Diners, Discover funktionieren selten. Verlassen Sie sich nicht auf Nicht-Visa/MC-Karten.
 - **Was Sie nicht können:** Peer-to-Peer-Überweisungen senden, rote Umschläge senden oder empfangen oder WeChat-Finanzdienstleistungen nutzen (Vermögensverwaltung, Mini-Programm-Kreditvergabe).
 
 ## Schritt-für-Schritt-Anleitung
@@ -32,77 +48,131 @@ WeChat Pay ist die andere Hälfte des mobilen Zahlungsduopols Chinas neben Alipa
 ### Schritt 1: Registrieren und Anmelden
 
 1. Laden Sie WeChat aus Ihrem App Store herunter.
-2. Registrieren Sie sich mit Ihrer **ausländischen Mobilfunknummer**. Die Verifizierung erfolgt per SMS.
-3. Schließen Sie die grundlegende Profileinrichtung ab – Sie müssen nicht sofort Kontakte hinzufügen.
+2. Registrieren Sie sich mit Ihrer **ausländischen Mobilfunknummer**. WeChat sendet einen 6-stelligen Code per SMS. Geben Sie ihn zur Verifizierung ein.
+3. Schließen Sie die grundlegende Profileinrichtung ab – wählen Sie ein Profilfoto, legen Sie eine WeChat-ID fest, bestätigen Sie die Datenschutzeinstellungen. Überspringen Sie das Hinzufügen von Kontakten vorerst.
 
 ### Schritt 2: Wallet-Region auf das chinesische Festland umstellen
 
-Dies ist der Schritt, den die meisten Anleitungen überspringen, und er ist die häufigste Quelle von Einrichtungsfehlern.
+Dieser Schritt bringt mehr ausländische Nutzer ins Stolpern als alles andere. Ohne ihn erscheint die Schaltfläche Karte hinzufügen entweder gar nicht oder zeigt nur Optionen für chinesische Bankkarten.
 
-1. Gehen Sie zu **Ich > Dienste** (oder „Wallet" in älteren Versionen).
-2. Wenn Ihre Wallet-Region auf Ihr Heimatland eingestellt ist, sind die China-Zahlungsfunktionen nicht verfügbar.
-3. Suchen Sie nach **„Wallet-Region wechseln"** oder **„Region ändern"** – normalerweise im Menü oben rechts (drei Punkte) der Dienste-/Wallet-Seite zu finden.
-4. Wählen Sie **Chinesisches Festland** als neue Region.
-5. Bestätigen Sie den Wechsel. Die App wird neu geladen und die Dienste-Seite ändert sich, um chinesische Zahlungsfunktionen anzuzeigen.
+1. Tippen Sie auf dem Chats-Bildschirm auf **Me** (Tab unten rechts, Personensymbol).
+2. Tippen Sie auf **Dienste** – das Symbol sieht aus wie eine Brieftasche mit Karten dahinter.
+3. Wenn Sie einen spärlichen Bildschirm mit nur „Aufladen" und „Bezahlen" in der Währung Ihres Heimatlandes sehen, sind Sie noch in Ihrer Heimatregion. Die vollständigen chinesischen Zahlungsfunktionen sind gesperrt.
 
-Hinweis: Der Wechsel zum chinesischen Festland hat keine Auswirkungen auf Ihre Chat-Kontakte, Moments oder andere WeChat-Funktionen. Es ändert nur die Zahlungsregion.
+![WeChat Pay Wallet-Region-Wechsel](/images/articles/wechat-pay-foreign-card.png)
+*Der Dienste-Bildschirm vor dem Region-Wechsel. Beachten Sie das Fehlen von Wallet, Bankkarten oder chinesischen Zahlungsoptionen.*
+
+4. Tippen Sie auf das **Drei-Punkte-Menü** (⋮) in der oberen rechten Ecke der Dienste-Seite.
+5. Scrollen Sie nach unten zu **Wallet-Region**. Es zeigt Ihre aktuelle Region – wahrscheinlich Ihr Heimatland.
+6. Tippen Sie auf **Region ändern**. Eine Liste von Ländern und Regionen erscheint.
+7. Wählen Sie **Chinesisches Festland** (中国大陆).
+8. Ein Bestätigungs-Popup erscheint: **„Ihre Wallet-Region auf das chinesische Festland umstellen? Sie können Ihre aktuellen WeChat-Pay-Funktionen weiterhin nutzen."** Dies ist irreführend – Ihre Heimatland-WeChat-Pay-Funktionen werden nach dem Wechsel nicht mehr funktionieren. Tippen Sie auf **Bestätigen**.
+9. WeChat startet die Dienste-Seite neu. Sie sehen jetzt chinesische Zahlungsfunktionen: ein grünes **„Geld"**- oder **„Bezahlen"**-Symbol, **„Wallet"** im Menü und **„Bankkarten"** als Option.
+
+**Was Sie beim Wechseln verlieren:** Ihr WeChat-Pay-Guthaben der Heimatregion (falls vorhanden) wird unzugänglich. Wenn Sie Geld in einer nicht-chinesischen WeChat-Pay-Wallet haben, geben Sie es aus oder heben Sie es ab, bevor Sie die Region wechseln.
 
 ### Schritt 3: Echtheitsüberprüfung mit Reisepass abschließen
 
-1. Gehen Sie zu **Ich > Dienste > Wallet > Identitätsinformationen** (oder „Echtheitsüberprüfung").
-2. Wählen Sie **Ausländischer Reisepass** als Ihren Ausweistyp.
-3. Geben Sie Ihren Namen **genau so ein, wie er in Ihrem Reisepass erscheint** – einschließlich Zwischennamen und Bindestriche.
-4. Geben Sie Ihre Passnummer, Nationalität und Ihr Geburtsdatum ein.
-5. Laden Sie ein Foto der Informationsseite Ihres Reisepasses hoch. Das Foto muss klar sein und den gesamten Text ohne Blendung zeigen.
-6. Schließen Sie den **Gesichtserkennungs-Scan** ab. Halten Sie Ihr Gesicht innerhalb des Rahmens und folgen Sie den Anweisungen auf dem Bildschirm (blinzeln, nicken oder Kopf drehen wie angewiesen).
-7. Senden Sie ab und warten Sie auf die Überprüfung. Dies kann von wenigen Minuten bis zu einigen Stunden dauern.
+1. Gehen Sie zu **Me > Dienste**, scrollen Sie, um **Wallet** zu finden. Tippen Sie darauf.
+
+![WeChat Pay Echtheitsüberprüfung](/images/articles/wechat-pay-foreign-card.png)
+*Der Wallet-Bildschirm. Bankkarten oben. Scrollen Sie nach unten, um Identitätsinformationen oder Echtheitsüberprüfung zu finden.*
+
+2. Suchen Sie nach **Identitätsinformationen** oder **Echtheitsüberprüfung** im Wallet-Menü. Die genaue Bezeichnung ändert sich zwischen WeChat-Versionen.
+3. Wählen Sie **Ausländischer Reisepass** als Ihren Ausweistyp. Wenn Sie nur „Chinesischer Personalausweis" als Option sehen, haben Sie Ihre Wallet-Region nicht korrekt umgestellt – kehren Sie zu Schritt 2 zurück.
+4. Geben Sie Ihren **vollständigen Namen** ein – exakte Übereinstimmung mit Ihrem Reisepass, einschließlich Zweitnamen, Bindestrichen und Abständen.
+5. Geben Sie Ihre **Passnummer**, **Nationalität** und Ihr **Geburtsdatum** ein. Das Datumsformat ist JJJJ-MM-TT.
+6. Der **Passfoto-Upload-Bildschirm** erscheint. Sie sehen einen Dokumentenrahmen auf dem Bildschirm. Positionieren Sie Ihre geöffnete Reisepass-Informationsseite innerhalb des Rahmens. Gute Beleuchtung – keine Spiegelung auf der Fotoseite. Halten Sie ruhig. WeChat nimmt automatisch auf, wenn das Bild klar ist.
+7. Der **Gesichtserkennungs-Scan** startet. Ein kreisförmiger Rahmen erscheint auf dunklem Hintergrund. Der Text lautet: „Passen Sie Ihr Gesicht in den Rahmen ein." Folgen Sie den Aufforderungen: langsam blinzeln, den Mund leicht öffnen oder den Kopf links/rechts drehen. Die Reihenfolge variiert. Ein grünes Häkchen erscheint bei Erfolg.
+
+![WeChat Pay Gesichtserkennung](/images/articles/wechat-pay-foreign-card.png)
+*Der WeChat-Gesichtsscan-Bildschirm. Beachten Sie, dass die Anweisungen selbst im englischen WeChat-Modus auf Chinesisch sind: „请将面部置于框内" bedeutet „Bitte positionieren Sie Ihr Gesicht innerhalb des Rahmens." Der Fortschrittsring füllt sich, während unten Bewegungsanweisungen erscheinen.*
+
+8. Absenden. Sie sehen einen Bildschirm mit einem Uhrsymbol und dem Text: **„Verifizierung in Arbeit – dies kann eine Weile dauern."**
+9. Warten. WeChat sendet eine Service-Nachricht (rotes Abzeichen auf dem Chats-Tab), wenn die Verifizierung abgeschlossen ist. Dies dauert typischerweise 30 Minuten bis 4 Stunden und bis zu 24 Stunden während chinesischer Feiertage oder Wochenenden.
 
 ### Schritt 4: Fügen Sie Ihre ausländische Bankkarte hinzu
 
-1. Nachdem die Überprüfung genehmigt wurde, gehen Sie zu **Ich > Dienste > Wallet > Bankkarten**.
-2. Tippen Sie auf **Bankkarte hinzufügen**.
-3. Geben Sie Ihre Kartennummer ein. WeChat erkennt automatisch Visa oder Mastercard.
-4. Füllen Sie Ihre Kartendetails aus: Ablaufdatum, CVV und die **bei Ihrer Bank registrierte Rechnungsadresse**. Die Adresse muss genau mit Ihren Bankunterlagen übereinstimmen.
-5. Schließen Sie die **SMS-Verifizierung** ab (ein Code, der an die bei Ihrer Bank registrierte Telefonnummer gesendet wird).
-6. Schließen Sie die **3D-Secure-Verifizierung** ab, wenn Sie dazu aufgefordert werden – dies ist ein zusätzliches Passwort oder ein Code Ihrer Bank.
+1. Gehen Sie nach der Verifizierungsgenehmigung zu **Me > Dienste > Wallet > Bankkarten**.
+2. Tippen Sie auf **Bankkarte hinzufügen**. Ein Kartenformular erscheint.
 
-### Schritt 5: Beginnen Sie zu bezahlen
+![WeChat Pay Karte hinzufügen](/images/articles/wechat-pay-foreign-card.png)
+*Der Karteneingabebildschirm. Das Kartennummerfeld erkennt automatisch das Netzwerk. Ablaufdatum, CVV und Rechnungsadressfelder folgen.*
+
+3. Geben Sie Ihre Kartennummer ein. WeChat erkennt automatisch Visa oder Mastercard während der Eingabe – ein kleines Kartenlogo erscheint neben dem Feld.
+4. Geben Sie **Ablaufdatum** (MM/JJ) und **CVV** ein.
+5. Geben Sie Ihre **Rechnungsadresse** ein. Das Adressformular von WeChat ist einfacher als das von Alipay – weniger Felder. Sie benötigen dennoch eine exakte Übereinstimmung mit Ihren Bankunterlagen.
+6. WeChat sendet einen **SMS-Verifizierungscode** an die bei Ihrer Bank registrierte Telefonnummer. Wenn Sie keine SMS empfangen können, weil Sie eine neue chinesische SIM-Karte verwenden, wechseln Sie vorübergehend zurück zu Ihrer Heim-SIM-Karte, fordern Sie den Code an, geben Sie ihn ein und wechseln Sie zurück. Dual-SIM-Telefone lösen dies.
+7. Wenn Sie dazu aufgefordert werden, schließen Sie die **3D-Secure-Verifizierung** ab – ein zusätzliches Passwort oder ein Code von der Sicherheitsseite Ihrer Bank.
+8. Ein grünes Häkchen und **„Karte hinzugefügt"** bestätigt den Erfolg.
+
+### Schritt 5: QR-Code-Scanner vs. Zahlungscode anzeigen – Die Verwirrung
+
+Anders als bei Alipay, wo beide Optionen prominent auf dem Startbildschirm sind, versteckt WeChat Pay sie unterschiedlich. Hier ist der Unterschied:
+
+**„Zahlungscode anzeigen" (der Händler scannt Sie):**
+- Öffnen Sie WeChat von einem beliebigen Bildschirm aus und wischen Sie vom oberen Bildschirmrand nach unten. Ein QR-Code und ein Barcode erscheinen – dies ist Ihr Zahlungscode. Der Händler scannt ihn.
+- Alternative: Gehen Sie zu **Me > Dienste > Geld** (grünes Symbol). Ihr Zahlungscode erscheint oben mit einem Barcode darunter.
+- Bei FamilyMart, 7-Eleven und Supermarktketten erwartet der Kassierer normalerweise, dass Sie diesen Code zeigen. Halten Sie Ihr Telefon an den Scanner neben dem Kassenbildschirm.
+- Der Zahlungscode **aktualisiert sich jede Minute**. Wenn es zu lange dauert, wischen Sie nach unten, um einen neuen zu generieren.
+
+**„Scannen zum Bezahlen" (Sie scannen den Händler):**
+- Tippen Sie auf dem Chats-Bildschirm auf das **„+"**-Symbol in der oberen rechten Ecke.
+- Tippen Sie auf **Scannen**. Die Kamera öffnet sich.
+- Richten Sie sie auf den QR-Code des Händlers – normalerweise eine laminierte Karte auf dem Tresen, ein Aufkleber an der Wand oder auf dem Bildschirm des POS-Geräts. WeChat erkennt ihn automatisch und öffnet den Zahlungsbildschirm.
+- In kleinen Restaurants und an Street-Food-Ständen ist der QR-Code fast immer auf dem Tisch oder Tresen. Setzen Sie sich, scannen Sie, bezahlen Sie. Niemand bringt Ihnen eine Rechnung.
+
+**Die Verwirrung:** Die Wisch-nach-unten-Zahlungscode-Geste funktioniert nur vom Haupt-WeChat-Bildschirm aus. Wenn Sie tief in einem Chat oder in den Einstellungen sind, bewirkt sie nichts. Viele Erstanwender stehen an der Kasse und wischen hektisch von ihrer Chat-Liste aus. Schließen Sie den Chat, gehen Sie zum Hauptbildschirm und wischen Sie dann nach unten.
+
+### Schritt 6: Beginnen Sie zu bezahlen
 
 So bezahlen Sie in einem Geschäft:
-- Tippen Sie auf **Ich > Dienste > Geld (das grüne „Bezahlen"-Symbol)**
-- Der Händler scannt Ihren QR-Code oder Sie tippen auf „Scannen", um den QR-Code des Händlers zu scannen
-- Die Zahlung wird von Ihrer verknüpften ausländischen Karte abgebucht
-- Sie erhalten eine Transaktionsbenachrichtigung
+- **Ihren Code zeigen:** Wischen Sie vom WeChat-Startbildschirm nach unten und zeigen Sie den QR-Code + Barcode dem Kassierer.
+- **Händler-Code scannen:** Tippen Sie auf **„+"** auf dem Chats-Tab, tippen Sie auf **Scannen** und scannen Sie den QR-Code des Händlers.
+- Geben Sie den Zahlungsbetrag ein, wenn Sie dazu aufgefordert werden, und geben Sie dann Ihr **6-stelliges Zahlungspasswort** ein.
+- Ein grünes Häkchen und ein Transaktionston bestätigen die Zahlung. WeChat sendet eine Service-Nachricht mit dem Betrag.
+
+## Mini-Programm-Zahlungen, die mit ausländischen Karten scheitern
+
+WeChat-Mini-Programme sind Apps innerhalb der App: Essen bestellen, Bahntickets buchen, Stromrechnungen bezahlen. Ihre ausländische Karte funktioniert bei einigen und scheitert bei anderen. Hier ist die Liste:
+
+| Mini-Programm / Dienst | Funktioniert mit ausländischer Karte? | Was passiert |
+|---|---|---|
+| Meituan (Essenslieferung, Hotelbuchung) | Teilweise | Funktioniert für Essensbestellungen unter 200 RMB. Scheitert bei Hotelkautionen oder Bestellungen mit angewendeten Coupons. Der Fehler: „Bestellung kann nicht abgeschlossen werden – Zahlungsmethode nicht unterstützt." Wechseln Sie zu Alipay für Meituan. |
+| Didi (Ride-Hailing) | Ja | Funktioniert zuverlässig. Bestätigen Sie nach dem Verknüpfen der Karte, dass sie in der Zahlungsmethodenliste von Didi angezeigt wird. Einige Nutzer berichten, dass sie speziell auf „Mit internationaler Karte bezahlen" tippen müssen. |
+| JD.com (Einkaufen) | Selten | Die meisten Transaktionen werden abgelehnt. Der Zahlungsprozessor von JD lehnt ausländische Karten bei virtuellen Gütern, Elektronik und Bestellungen über 500 RMB ab. Verwenden Sie stattdessen Alipay. |
+| 12306 (Bahntickets) | Nein | Ausländische Karten werden im offiziellen Bahnbuchungs-Mini-Programm abgelehnt. Verwenden Sie trip.com (Website, nicht Mini-Programm), die Bahnbuchung von Alipay oder kaufen Sie am Bahnhof. |
+| Restaurant-Bestell-Mini-Programme (Tisch-QR) | Meistens ja | Wenn Sie einen QR-Code an einem Restauranttisch scannen, um Essen zu bestellen, funktioniert Ihre ausländische Karte normalerweise. Die Zahlung läuft über das Standard-Händlersystem von WeChat Pay. |
+| Stromrechnungszahlung (Strom, Wasser) | Nein | Diese erfordern ein chinesisches Bankkonto. Ihre ausländische Karte ist keine Option im Zahlungsmethoden-Auswahlmenü. |
+| Taobao-Mini-Programm (Einkaufen) | Manchmal | Kleine Käufe (unter 200 RMB) bei Taobao-Verkäufern, die internationale Karten akzeptieren, funktionieren. Größere Käufe oder als „nur Inlandszahlung" gekennzeichnete Artikel scheitern. |
+
+**Faustregel:** Für Online-Dienste (Essenslieferung, Einkaufen, Bahntickets) verwenden Sie Alipay. Das Mini-Programm-Ökosystem von WeChat Pay setzt meistens eine chinesische Bankkarte voraus. WeChat Pay funktioniert am besten für persönliche Zahlungen in physischen Geschäften, Restaurants und bei Straßenhändlern.
+
+## Trinkgeld- und Geschenkgeld-Funktionen
+
+**Es gibt keine Trinkgeldfunktion für ausländische Kartenkonten.** Chinesisches digitales Trinkgeld (打赏, „Dashang") ist eine Funktion, mit der Sie kleine Beträge (1-66 RMB) an Content-Ersteller in Mini-Programmen senden können. Dies läuft über Peer-to-Peer-Überweisungen, die ausländische Kartenkonten nicht durchführen können. Wenn ein Mini-Programm Sie mit einer „Geschenk senden"- oder „Autor Trinkgeld geben"-Schaltfläche auffordert, zeigt das Antippen: **„Diese Funktion ist für Ihren Kontotyp nicht verfügbar."**
+
+**Rote Umschläge (红包) sind nicht verfügbar.** Dies ist die am häufigsten gestellte Frage von Ausländern. Die Funktion der roten Umschläge von WeChat – Geld in einem digitalen roten Paket an Freunde senden – funktioniert nicht auf ausländischen Kartenkonten. Sie können keine roten Umschläge senden. Sie können keine roten Umschläge empfangen. Wenn ein chinesischer Freund Ihnen einen sendet, zeigt WeChat: **„Sie haben einen roten Umschlag erhalten,"** aber wenn Sie zum Öffnen tippen: **„Kann nicht geöffnet werden – Ihr Kontotyp unterstützt diese Funktion nicht."** Das Geld wird nach 24 Stunden an den Absender zurückgegeben.
+
+**Geschenkkarten und Gutscheine, die in Mini-Programmen gekauft werden**, können funktionieren, wenn die Zahlung über eine Standard-Händlertransaktion verarbeitet wird. Eine digitale Café-Ketten-Geschenkkarte, die als normaler Kauf abgerechnet wird: manchmal. Ein Peer-to-Peer-Geschenk: nie.
 
 ## Häufige Fehlerbehebungen
 
 | Problem | Wahrscheinliche Ursache | Lösung |
 |---|---|---|
-| „Funktion in Ihrer Region nicht verfügbar" | Wallet-Region nicht auf chinesisches Festland umgestellt | Gehen Sie zu Einstellungen in der Wallet und wechseln Sie die Region zum chinesischen Festland |
-| „Kartentyp nicht unterstützt" | Verwendung einer anderen Karte als Visa oder Mastercard | Wechseln Sie zu einer Visa oder Mastercard – die Unterstützung von WeChat Pay für andere Netzwerke ist unzuverlässig |
-| „Echtheitsüberprüfung fehlgeschlagen" | Name oder Passnummer nicht übereinstimmend | Geben Sie die Details erneut ein, die genau mit dem Reisepass übereinstimmen, einschließlich Leerzeichen und Bindestrichen |
-| „Karte kann nicht hinzugefügt werden" nach Verifizierung | Bank blockiert die Transaktion | Rufen Sie Ihre Bank an, um Auslands-Online-Transaktionen zu aktivieren und informieren Sie sie, dass Sie in China sind |
-| „Transaktion abgelehnt" bei einem Händler | Händlerkategorie blockiert oder Kartenlimit überschritten | Versuchen Sie einen kleineren Betrag oder einen anderen Händler; bestätigen Sie das tägliche Kartenlimit mit Ihrer Bank |
-| „Risikokontrolle – Zahlung eingeschränkt" | Ungewöhnliches Transaktionsmuster erkannt | Dies ist ein automatischer Betrugssystem-Auslöser. Warten Sie 24 Stunden und versuchen Sie es erneut mit kleineren, normalen Transaktionen |
-
-## WeChat Pay vs. Alipay für Ausländer
-
-Beide Plattformen dienen demselben Zweck, aber es gibt Unterschiede, die zu kennen sich lohnt:
-
-| Aspekt | Alipay | WeChat Pay |
-|---|---|---|
-| Kartenunterstützung | Visa, MC, JCB, Amex, Diners, Discover | Hauptsächlich Visa und Mastercard |
-| Einrichtungskomplexität | Geringer (kein Region-Wechsel erforderlich) | Höher (Region-Wechsel erforderlich) |
-| Einzeltransaktionslimit | 3.000 RMB | 6.000 RMB |
-| App-Sprache | Vollständige englische Oberfläche | Teilweise Englisch – einige Einstellungen bleiben auf Chinesisch |
-| Händlerabdeckung | Etwas besser für Online-Dienste (Flüge, Hotels) | Besser für Straßenhändler, kleine Geschäfte, Peer-lastige Szenarien |
-| TourCard-Backup | Ja (Prepaid Alipay TourCard) | Kein Äquivalent |
-
-Die meisten ausländischen Besucher richten beides ein. Alipay ist einfacher zu konfigurieren und hat eine bessere englische Oberfläche. WeChat Pay hat einen Vorteil bei kleineren Händlern und ländlichen Gebieten, wo WeChat die dominierende Zahlungsmethode ist. Beides zu haben, gibt Ihnen vollständige Abdeckung.
+| „Funktion in Ihrer Region nicht verfügbar" | Wallet-Region nicht auf das chinesische Festland umgestellt | Gehen Sie zu Dienste > ⋮-Menü > Wallet-Region > Wechseln zu Chinesisches Festland |
+| „Kartentyp nicht unterstützt" | Verwendung von Amex, Diners, Discover oder JCB | Wechseln Sie zu einer Visa oder Mastercard. Verschwenden Sie keine Zeit mit anderen Netzwerken. Wenn Sie bereits Visa/MC verwenden, rufen Sie Ihre Bank an – sie blockiert China-Transaktionen auf Bankebene. |
+| „Echtheitsüberprüfung fehlgeschlagen" | Name oder Passnummer nicht übereinstimmend oder Fotoqualität | Geben Sie die Details erneut ein, die genau mit dem Reisepass übereinstimmen. Machen Sie das Passfoto bei hellem, gleichmäßigem Licht ohne Schatten auf dem Text neu. |
+| „Karte kann nicht hinzugefügt werden" nach Verifizierungsgenehmigung | Bank blockiert die Nullbetrag-Autorisierung | Rufen Sie Ihre Bank an. Bitten Sie sie, Auslands-Online-Transaktionen zu aktivieren und WeChat/chinesische Händler auf die Whitelist zu setzen. |
+| „Transaktion abgelehnt" bei einem Händler | Betrag über Ihrem Einzelabbuchungslimit (max. 6.000 RMB) oder Händlerkategorie blockiert | Teilen Sie in kleinere Zahlungen auf oder verwenden Sie eine andere Karte. Versuchen Sie zuerst eine 50-RMB-Testtransaktion beim selben Händler. |
+| „Risikokontrolle – Zahlung eingeschränkt" | Betrugssystem von WeChat durch ungewöhnliches Muster ausgelöst | Stoppen Sie WeChat Pay für 24 Stunden. Versuchen Sie es nicht wiederholt erneut – jeder abgelehnte Versuch zählt gegen Sie. Verwenden Sie einen Tag lang Alipay oder Bargeld. Versuchen Sie am nächsten Tag eine kleine Transaktion (unter 20 RMB). |
+| Verifizierung seit mehr als 24 Stunden ausstehend | Passfoto in der manuellen Überprüfungswarteschlange feststeckend | Dies passiert während chinesischer Nationalfeiertage (Frühlingsfest, Goldene Woche im Oktober). Warten Sie es ab oder gehen Sie zu Me > Dienste > Wallet > Identitätsinformationen und überprüfen Sie den Status. Wenn es eine Schaltfläche „Erneut einreichen" gibt, wurde Ihr Foto abgelehnt – machen Sie ein besseres. |
+| Wallet-Region-Wechsel ausgegraut | Sie haben ein Guthaben in Ihrer Heimatregion-Wallet | Heben Sie Ihr WeChat-Pay-Guthaben der Heimatregion zuerst ab oder geben Sie es aus. Die Wechseloption wird entsperrt, sobald Ihr Guthaben null ist. |
 
 ## Tipps für reibungslose Nutzung
 
-- **Richten Sie zuerst Alipay ein**, dann WeChat Pay. Die englische Oberfläche und die einfachere Einrichtung von Alipay machen es zu einer reibungsloseren ersten Erfahrung. Sobald Alipay funktioniert, haben Sie ein Backup, während Sie WeChat konfigurieren.
-- **Bewahren Sie Ihren Pass-Scan auf Ihrem Telefon auf.** WeChat kann Sie bitten, sich erneut zu verifizieren, wenn es ungewöhnliche Aktivitäten feststellt.
-- **Testen Sie mit einem kleinen Kauf.** Kaufen Sie nach der Einrichtung eine Flasche Wasser im Supermarkt – eine 3-RMB-Transaktion bestätigt, dass alles funktioniert, bevor Sie sich für ein 500-RMB-Abendessen darauf verlassen.
-- **Wenn WeChat Pay nach mehreren Versuchen nicht kooperiert**, versuchen Sie es nicht weiter – Sie riskieren, das Konto zu sperren. Verwenden Sie stattdessen Alipay und Bargeld und versuchen Sie es am nächsten Tag erneut.
+- **Richten Sie zuerst Alipay ein**, dann WeChat Pay. Die englische Oberfläche und die einfachere Einrichtung von Alipay machen es zu einer reibungsloseren ersten Erfahrung. Sobald Alipay funktioniert, haben Sie eine funktionierende Zahlungsmethode, während Sie WeChat konfigurieren.
+- **Bewahren Sie Ihren Pass-Scan auf Ihrem Telefon auf.** WeChat kann Sie bitten, sich erneut zu verifizieren, wenn es ungewöhnliche Aktivitäten feststellt – besonders wenn Sie das Telefon wechseln oder die App neu installieren.
+- **Testen Sie mit einem kleinen Kauf.** Kaufen Sie nach der Einrichtung eine Flasche Wasser in einem Supermarkt – eine 3-RMB-Transaktion bestätigt, dass alles funktioniert, bevor Sie sich für ein 500-RMB-Abendessen darauf verlassen.
+- **Wenn WeChat Pay nach 3 Versuchen nicht kooperiert**, hören Sie auf zu versuchen. Jeder fehlgeschlagene Versuch erhöht die Wahrscheinlichkeit einer vorübergehenden Kontosperrung. Verwenden Sie stattdessen Alipay und Bargeld und versuchen Sie es am nächsten Tag erneut.
+- **Machen Sie Screenshots der chinesischen Fehlerbildschirme.** Wenn ein Fehler nur auf Chinesisch erscheint, machen Sie einen Screenshot und verwenden Sie Google Translate oder die integrierte Bildübersetzung von WeChat (langes Drücken auf das Bild in einem Chat mit sich selbst, tippen Sie auf „Übersetzen").
