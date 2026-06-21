@@ -496,3 +496,98 @@ h4 { font-size: 1rem; font-weight: 600; }
   color: var(--color-muted-foreground);
 }
 .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+/* ========== Print Styles ========== */
+@media print {
+  /* Hide non-content elements */
+  header, footer, nav, aside,
+  .sticky, [class*="fixed"],
+  .lg\:block,  /* sidebar TOC */
+  #giscus-container,
+  .adsbygoogle,
+  button[aria-label="Back to top"],
+  button[aria-label="Switch language"],
+  button[aria-label="Toggle dark mode"],
+  button[aria-label="Toggle menu"],
+  .reading-progress {
+    display: none !important;
+  }
+
+  /* Reset layout */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .dark body,
+  .dark {
+    --color-background: #fff;
+    --color-foreground: #000;
+    --color-secondary: #333;
+    --color-muted: #f5f5f5;
+    --color-border: #ccc;
+  }
+
+  /* Full-width content */
+  main, .flex-1, .min-w-0 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  article {
+    max-width: 100% !important;
+  }
+
+  /* Typography */
+  h1 { font-size: 18pt; page-break-after: avoid; }
+  h2 { font-size: 14pt; page-break-after: avoid; }
+  h3 { font-size: 12pt; page-break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+
+  /* Show link URLs */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+  a[href^="/"]::after {
+    content: " (https://chinavisaentry.com" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* Tables */
+  table { border-collapse: collapse; width: 100%; page-break-inside: avoid; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  th { background: #f0f0f0; }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Checkboxes in checklists */
+  input[type="checkbox"] {
+    border: 1px solid #000;
+  }
+
+  /* Page breaks */
+  .page-break { page-break-before: always; }
+
+  /* Watermark / credit */
+  body::after {
+    content: "Printed from chinavisaentry.com — China Survival Guide";
+    display: block;
+    text-align: center;
+    font-size: 8pt;
+    color: #999;
+    margin-top: 20pt;
+    padding-top: 10pt;
+    border-top: 1px solid #ccc;
+  }
+}
